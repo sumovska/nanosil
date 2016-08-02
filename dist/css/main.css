@@ -477,6 +477,7 @@ button:focus,
   border-radius: 5px;
   background: -webkit-linear-gradient(top, #565656 0%, #5d5d5d 8%, #959595 14%, #727272 17%, #747473 24%, #b2b2b2 33%, #d8d8d8 40%, #cbcbcb 43%, #e7e7e7 48%, #ffffff 53%, #fefbf0 60%, #cecece 63%, #949494 67%, #727272 71%, #727272 80%, #797979 86%, #999999 90%, #929292 100%);
   background: linear-gradient(to bottom, #565656 0%, #5d5d5d 8%, #959595 14%, #727272 17%, #747473 24%, #b2b2b2 33%, #d8d8d8 40%, #cbcbcb 43%, #e7e7e7 48%, #ffffff 53%, #fefbf0 60%, #cecece 63%, #949494 67%, #727272 71%, #727272 80%, #797979 86%, #999999 90%, #929292 100%);
+  box-shadow: inset 0 0 13px 13px rgba(0, 0, 0, 0.69);
   opacity: .3;
   position: absolute;
   top: 50%;
