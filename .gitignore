@@ -2,6 +2,6 @@
 psd
 bower_components
 node_modules
-temp
+.temp
 dist/css/maps
 *.map
