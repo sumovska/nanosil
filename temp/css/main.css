@@ -162,7 +162,7 @@ h2,
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 95px;
-    line-height: 95px;
+    line-height: 64px;
   }
 }
 h3,
@@ -419,7 +419,8 @@ button:hover,
 @media (min-width: 750px) {
   .index {
     padding-top: 76px;
-    background-position: 51% -44px;
+    padding-bottom: 190px;
+    background-position: 51% 0;
   }
 }
 .index .wrapper {
@@ -636,9 +637,14 @@ button:hover,
    VERIFY
    ========================================================================== */
 .verify {
-  margin-top: -156px;
+  margin-top: -140px;
   position: relative;
   z-index: 2;
+}
+@media (min-width: 750px) {
+  .verify {
+    margin-top: -96px;
+  }
 }
 .verify .bg {
   background: #f0862e;
@@ -649,12 +655,17 @@ button:hover,
   right: 0;
   z-index: 0;
 }
+@media (min-width: 750px) {
+  .verify .bg {
+    top: 98px;
+  }
+}
 .verify .wrapper {
   position: relative;
   z-index: 2;
 }
 .verify .heading {
-  margin-bottom: 0;
+  margin: 0;
   color: #e7812d;
 }
 .verify .text {
@@ -662,9 +673,14 @@ button:hover,
   font-size: 14px;
   line-height: 17px;
 }
+@media (min-width: 750px) {
+  .verify .text {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+}
 .verify .list {
-  max-width: 250px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   list-style: none;
   font-weight: 500;
@@ -673,9 +689,31 @@ button:hover,
   color: #fff;
   text-align: center;
 }
+@media (min-width: 750px) {
+  .verify .list {
+    padding: 68px 10px 38px;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+}
 .verify .list li {
-  margin-bottom: 20px;
+  max-width: 250px;
+  margin: 0 auto 20px;
   padding: 0 10px;
+}
+@media (min-width: 750px) {
+  .verify .list li {
+    margin: 0 0 32px;
+  }
+  .verify .list li:nth-child(2n) {
+    order: 30;
+  }
+  .verify .list li:nth-child(3n) {
+    order: 20;
+  }
 }
 .verify .list .image {
   width: 250px;
@@ -687,6 +725,21 @@ button:hover,
 .verify .girl {
   width: 200px;
   margin: 0 auto;
+}
+@media (min-width: 750px) {
+  .verify .girl {
+    width: 615px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+.verify .girl img {
+  width: 100%;
+  height: auto;
 }
 /* ==========================================================================
    EFFECTS

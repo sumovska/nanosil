@@ -507,7 +507,7 @@ button:focus,
    VERIFY
    ========================================================================== */
 .verify {
-  margin-top: -156px;
+  margin-top: -140px;
   position: relative;
   z-index: 2;
 }
@@ -525,7 +525,7 @@ button:focus,
   z-index: 2;
 }
 .verify .heading {
-  margin-bottom: 0;
+  margin: 0;
   color: #e7812d;
 }
 .verify .text {
@@ -534,8 +534,7 @@ button:focus,
   line-height: 17px;
 }
 .verify .list {
-  max-width: 250px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   list-style: none;
   font-weight: 500;
@@ -545,7 +544,8 @@ button:focus,
   text-align: center;
 }
 .verify .list li {
-  margin-bottom: 20px;
+  max-width: 250px;
+  margin: 0 auto 20px;
   padding: 0 10px;
 }
 .verify .list .image {
@@ -558,6 +558,10 @@ button:focus,
 .verify .girl {
   width: 200px;
   margin: 0 auto;
+}
+.verify .girl img {
+  width: 100%;
+  height: auto;
 }
 /* ==========================================================================
    EFFECTS
@@ -666,7 +670,7 @@ button:focus,
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 95px;
-    line-height: 95px;
+    line-height: 64px;
   }
   h3,
   .h3 {
@@ -704,7 +708,8 @@ button:focus,
   }
   .index {
     padding-top: 76px;
-    background-position: 51% -44px;
+    padding-bottom: 190px;
+    background-position: 51% 0;
   }
   .index .wrapper {
     padding-left: 50%;
@@ -764,6 +769,51 @@ button:focus,
   .index .fn {
     margin-top: 12px;
     font-size: 15px;
+  }
+  .verify {
+    margin-top: -96px;
+  }
+  .verify .bg {
+    top: 98px;
+  }
+  .verify .text {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .verify .list {
+    padding: 68px 10px 38px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap row;
+    flex-flow: wrap row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+  .verify .list li {
+    margin: 0 0 32px;
+  }
+  .verify .list li:nth-child(2n) {
+    -webkit-box-ordinal-group: 31;
+    -ms-flex-order: 30;
+    order: 30;
+  }
+  .verify .list li:nth-child(3n) {
+    -webkit-box-ordinal-group: 21;
+    -ms-flex-order: 20;
+    order: 20;
+  }
+  .verify .girl {
+    width: 615px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
   }
 }
 @media (min-width: 1170px) {

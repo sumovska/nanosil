@@ -2,39 +2,48 @@
    VERIFY
    ========================================================================== */
 .verify {
-    margin-top: -156px;
+    margin-top: -140px;
     position: relative;
     z-index: 2;
+    @media @tablet-sm {
+        margin-top: -96px;
+    }
 
     .bg {
-      background: @color-orange;
+        background: @color-orange;
         position: absolute;
         top: 140px;
         bottom: 0;
         left: 0;
         right: 0;
         z-index: 0;
+        @media @tablet-sm {
+            top: 98px;
+        }
     }
 
     .wrapper {
-      position: relative;
-      z-index: 2;
+        position: relative;
+        z-index: 2;
     }
 
     .heading {
-      margin-bottom: 0;
-      color: @color-orange-dark;
+        margin: 0;
+        color: @color-orange-dark;
     }
 
     .text {
-      margin-bottom: 12px;
-      font-size: 14px;
-      line-height: 17px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 17px;
+        @media @tablet-sm {
+          margin-bottom: 16px;
+          font-size: 16px;
+        }
     }
 
     .list {
-      max-width: 250px;
-      margin: 0 auto;
+        margin: 0;
         padding: 0;
         list-style: none;
         font-weight: 500;
@@ -42,10 +51,28 @@
         line-height: 18px;
         color: @color-white;
         text-align: center;
+        @media @tablet-sm {
+          padding: 68px 10px 38px;
+          display: flex;
+          flex-flow: wrap row;
+          justify-content: space-between;
+          position: relative;
+          z-index: 2;
+        }
 
         li {
-          margin-bottom: 20px;
-          padding: 0 10px;
+          max-width: 250px;
+          margin: 0 auto 20px;
+            padding: 0 10px;
+            @media @tablet-sm {
+              margin: 0 0 32px;
+              &:nth-child(2n) {
+                order: 30;
+              }
+              &:nth-child(3n) {
+               order: 20;
+              }
+            }
         }
 
         .image {
@@ -58,7 +85,21 @@
     }
 
     .girl {
-      width: 200px;
-      margin: 0 auto;
+        width: 200px;
+        margin: 0 auto;
+        @media @tablet-sm {
+          width: 615px;
+          margin: 0 auto;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
     }
 }
