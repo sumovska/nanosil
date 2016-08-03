@@ -784,14 +784,22 @@ button:hover,
   color: #fff;
   text-align: center;
 }
+.verify .list:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
 @media (min-width: 750px) {
   .verify .list {
     padding: 68px 10px 38px;
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: space-between;
     position: relative;
     z-index: 2;
+  }
+}
+@media (min-width: 1170px) {
+  .verify .list {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .verify .list li {
@@ -803,11 +811,22 @@ button:hover,
   .verify .list li {
     margin: 0 0 32px;
   }
-  .verify .list li:nth-child(2n) {
-    order: 30;
+  .verify .list li:nth-child(even) {
+    float: right;
   }
-  .verify .list li:nth-child(3n) {
-    order: 20;
+  .verify .list li:nth-child(odd) {
+    float: left;
+  }
+  .verify .list li:nth-child(2n+1) {
+    clear: left;
+  }
+}
+@media (min-width: 1170px) {
+  .verify .list li:first-child {
+    margin-left: 130px;
+  }
+  .verify .list li:nth-child(2) {
+    margin-right: 124px;
   }
 }
 .verify .list .image {
