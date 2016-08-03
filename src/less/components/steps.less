@@ -1,0 +1,116 @@
+/* ==========================================================================
+   STEPS
+   ========================================================================== */
+.steps {
+    padding-top: 56px;
+    text-align: center;
+    background: url('@{images}/bg/steps.jpg') 0 0 repeat-y;
+    background-size: 300% auto;
+
+    .heading {
+        margin-top: 0;
+        margin-bottom: 18px;
+        font-size: 46px;
+        line-height: 53px;
+        .color {
+            color: @color-carrot;
+        }
+    }
+
+    .text {
+        font-size: 18px;
+        line-height: 22px;
+        .color {
+            color: @color-blue-dark;
+        }
+    }
+
+    .list {
+      margin-top: 40px;
+      margin-left: -20px;
+      margin-right: -20px;
+        padding: 0;
+        list-style: none;
+        font: bold 21px/23px @font-heading;
+        color: @color-maroon;
+        counter-reset: my-badass-counter;
+
+        li {
+            margin-bottom: 22px;
+        }
+
+        img {
+            width: 296px;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
+        .h {
+            max-width: 220px;
+            margin: 0 auto;
+            display: block;
+            &:before {
+                .pseudo;
+                width: 82px;
+                height: 82px;
+                margin: 0 auto 28px;
+                content: counter(my-badass-counter);
+                counter-increment: my-badass-counter;
+                font-size: 60px;
+                line-height: 95px;
+                color: @color-white;
+                background: @color-orange;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .result {
+
+      .entry {
+        position: relative;
+        &:after {
+          .clearfix;
+        }
+        &:nth-of-type(2) {
+            margin-top: -56px;
+            margin-right: -20px;
+
+            img {
+              float: right;
+            }
+
+            .text {
+              left: auto;
+              right: 0;
+              background: @color-green;
+              bottom: auto;
+top: 18px;
+right: 24px;
+            }
+        }
+      }
+
+      img {
+        width: 270px;
+        height: auto;
+      }
+
+      .text {
+        width: 72px;
+        height: 72px;
+        margin: auto 0;
+        border-radius: 50%;
+        background: @color-red;
+        color: @color-white;
+        font: bold 24px/72px @font-heading;
+        position: absolute;
+        left: 0;
+        top: 40px;
+        bottom: 0;
+      }
+
+    }
+}

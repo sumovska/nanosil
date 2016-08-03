@@ -879,6 +879,7 @@ button:hover,
    ========================================================================== */
 .effects {
   padding-top: 58px;
+  padding-bottom: 30px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 180%;
@@ -1006,6 +1007,111 @@ button:hover,
   .effects .list li .hexagon {
     left: 65px;
   }
+}
+/* ==========================================================================
+   STEPS
+   ========================================================================== */
+.steps {
+  padding-top: 56px;
+  text-align: center;
+  background: url('../img/bg/steps.jpg') 0 0 repeat-y;
+  background-size: 300% auto;
+}
+.steps .heading {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 46px;
+  line-height: 53px;
+}
+.steps .heading .color {
+  color: #e07436;
+}
+.steps .text {
+  font-size: 18px;
+  line-height: 22px;
+}
+.steps .text .color {
+  color: #114a7f;
+}
+.steps .list {
+  margin-top: 40px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0;
+  list-style: none;
+  font: bold 21px/23px 'Bebas Neue', Arial, sans-serif;
+  color: #380b08;
+  counter-reset: my-badass-counter;
+}
+.steps .list li {
+  margin-bottom: 22px;
+}
+.steps .list img {
+  width: 296px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
+}
+.steps .list .h {
+  max-width: 220px;
+  margin: 0 auto;
+  display: block;
+}
+.steps .list .h:before {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 28px;
+  content: counter(my-badass-counter);
+  counter-increment: my-badass-counter;
+  font-size: 60px;
+  line-height: 95px;
+  color: #fff;
+  background: #f0862e;
+  border-radius: 50%;
+}
+.steps .result .entry {
+  position: relative;
+}
+.steps .result .entry:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.steps .result .entry:nth-of-type(2) {
+  margin-top: -56px;
+  margin-right: -20px;
+}
+.steps .result .entry:nth-of-type(2) img {
+  float: right;
+}
+.steps .result .entry:nth-of-type(2) .text {
+  left: auto;
+  right: 0;
+  background: #4caf50;
+  bottom: auto;
+  top: 18px;
+  right: 24px;
+}
+.steps .result img {
+  width: 270px;
+  height: auto;
+}
+.steps .result .text {
+  width: 72px;
+  height: 72px;
+  margin: auto 0;
+  border-radius: 50%;
+  background: #ff0000;
+  color: #fff;
+  font: bold 24px/72px 'Bebas Neue', Arial, sans-serif;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  bottom: 0;
 }
 /* ==========================================================================
    PAGE
