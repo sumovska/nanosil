@@ -7,7 +7,12 @@
     background: url('@{images}/bg/steps.jpg') 0 0 repeat-y;
     background-size: 300% auto;
     @media @tablet-sm {
-      padding-top: 64px;
+        padding-top: 64px;
+    }
+    @media @desktop-sm {
+        padding-top: 114px;
+        background-size: 150% auto;
+        background-position: 0 30px;
     }
 
     .heading {
@@ -23,6 +28,9 @@
             font-size: 82px;
             line-height: 85px;
             background-size: 210% auto;
+        }
+        @media @desktop-sm {
+            margin-bottom: 6px;
         }
     }
 
@@ -56,6 +64,13 @@
             padding-left: 35px;
             padding-right: 35px;
         }
+        @media @desktop-sm {
+            margin-top: 82px;
+        }
+        @media @desktop-md {
+            margin-left: -45px;
+            margin-right: -45px;
+        }
 
         li {
             margin-bottom: 22px;
@@ -66,6 +81,57 @@
             @media @tablet-sm {
                 margin-bottom: 34px;
             }
+            @media @desktop-sm {
+                width: 25%;
+                &:first-child {
+                    margin-top: 145px;
+                    img {
+                        margin-bottom: 0;
+                        margin-left: -100px;
+                        transform: rotate(-20deg);
+                    }
+                }
+                &:nth-child(2) {
+                    img {
+                        margin-bottom: 16px;
+                        margin-left: -60px;
+                        transform: rotate(-5deg);
+                    }
+                }
+                &:nth-child(3) {
+                    margin-top: 26px;
+                    img {
+                        margin-right: -80px;
+                        transform: rotate(14deg);
+                    }
+                }
+                &:nth-child(4) {
+                    margin-top: 244px;
+                    img {
+                        margin-right: -100px;
+                        transform: rotate(20deg);
+                    }
+                }
+            }
+            @media @desktop-md {
+              &:first-child {
+                  img {
+                      transform: rotate(-30deg);
+                  }
+              }
+              &:nth-child(2) {
+                  img {
+                      transform: rotate(-14deg);
+                  }
+              }
+              &:nth-child(4) {
+                  img {
+                    margin-right: -120px;
+                      margin-bottom: -16px;
+                      transform: rotate(45deg);
+                  }
+              }
+            }
         }
 
         img {
@@ -74,6 +140,9 @@
             height: auto;
             margin: 0 auto 10px;
             display: block;
+            @media @desktop-sm {
+                max-width: none;
+            }
         }
 
         .h {
@@ -99,6 +168,10 @@
     .result {
         @media @tablet-sm {
             text-align: center;
+        }
+        @media @desktop-sm {
+            position: relative;
+            top: -176px;
         }
 
         .entry {
@@ -139,13 +212,18 @@
                     }
                 }
             }
+            @media @desktop-sm {
+                &:first-of-type {
+                    margin-left: -40px;
+                }
+            }
         }
 
         img {
             width: 270px;
             height: auto;
             @media @tablet-sm {
-                width: 364px;
+                width: 365px;
             }
         }
 

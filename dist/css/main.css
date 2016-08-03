@@ -999,7 +999,7 @@ button:focus,
     right: 64px;
   }
   .steps .result img {
-    width: 364px;
+    width: 365px;
   }
   .steps .result .text {
     left: -10px;
@@ -1097,6 +1097,7 @@ button:focus,
   }
   .effects {
     padding-top: 160px;
+    padding-bottom: 120px;
   }
   .effects .heading {
     margin-bottom: 128px;
@@ -1113,6 +1114,88 @@ button:focus,
   }
   .effects .list li .hexagon {
     left: 65px;
+  }
+  .steps {
+    padding-top: 114px;
+    background-size: 150% auto;
+    background-position: 0 30px;
+  }
+  .steps .heading {
+    margin-bottom: 6px;
+  }
+  .steps .list {
+    margin-top: 82px;
+  }
+  .steps .list li {
+    width: 25%;
+  }
+  .steps .list li:first-child {
+    margin-top: 145px;
+  }
+  .steps .list li:first-child img {
+    margin-bottom: 0;
+    margin-left: -100px;
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  .steps .list li:nth-child(2) img {
+    margin-bottom: 16px;
+    margin-left: -60px;
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  .steps .list li:nth-child(3) {
+    margin-top: 26px;
+  }
+  .steps .list li:nth-child(3) img {
+    margin-right: -80px;
+    -webkit-transform: rotate(14deg);
+    -ms-transform: rotate(14deg);
+    transform: rotate(14deg);
+  }
+  .steps .list li:nth-child(4) {
+    margin-top: 244px;
+  }
+  .steps .list li:nth-child(4) img {
+    margin-right: -100px;
+    -webkit-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  .steps .list img {
+    max-width: none;
+  }
+  .steps .result {
+    position: relative;
+    top: -176px;
+  }
+  .steps .result .entry:first-of-type {
+    margin-left: -40px;
+  }
+}
+@media (min-width: 1380px) {
+  .steps .list {
+    margin-left: -45px;
+    margin-right: -45px;
+  }
+  .steps .list li:first-child img {
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+  .steps .list li:nth-child(2) img {
+    -webkit-transform: rotate(-14deg);
+    -ms-transform: rotate(-14deg);
+    transform: rotate(-14deg);
+  }
+  .steps .list li:nth-child(4) img {
+    margin-right: -120px;
+    margin-bottom: -16px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 }
 
