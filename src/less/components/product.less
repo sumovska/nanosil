@@ -1,0 +1,94 @@
+/* ==========================================================================
+   PRODUCT
+   ========================================================================== */
+.product {
+    .heading {
+        margin: 0 0 42px;
+        text-align: center;
+        font-size: 56px;
+        line-height: 56px;
+    }
+
+    .info {
+        margin-bottom: 20px;
+        padding: 6px 0 20px 21px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        border-left: 9px solid @color-blue-dark;
+    }
+
+    .image {
+        margin-bottom: 100px;
+        position: relative;
+        &:before, &:after {
+            .pseudo;
+            box-sizing: content-box;
+            position: absolute;
+            transform: rotate(-9deg);
+            z-index: 0;
+        }
+        &:before {
+            width: 147px;
+            border: 46px solid rgba(0, 0, 0, 0);
+            border-top: 140px solid @color-blue-dark;
+            border-bottom: 0 solid @color-blue-dark;
+            right: 26px;
+            bottom: -34px;
+        }
+        &:after {
+            width: 0;
+            height: 0;
+            border: 120px solid rgba(0, 0, 0, 0);
+            border-bottom: 90px solid @color-blue-dark;
+            right: 53px;
+            bottom: 103px;
+        }
+
+        img {
+            width: 156px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .list-check {
+          margin-bottom: 38px;
+        padding: 0;
+        list-style: none;
+
+        li {
+            min-height: 98px;
+            margin-bottom: 16px;
+            padding: 16px 0 16px 96px;
+            position: relative;
+            &:before, &:after {
+                .pseudo;
+                position: absolute;
+            }
+            &:before {
+                width: 98px;
+                height: 98px;
+                background: url('@{images}/temp/pentagon.png') 0 0 no-repeat;
+                background-size: cover;
+                left: -15px;
+                top: 0;
+            }
+            &:after {
+                width: 50px;
+                height: 50px;
+                background: url('@{images}/temp/ok.png') 0 0 no-repeat;
+                background-size: cover;
+                left: 10px;
+                top: 24px;
+            }
+        }
+    }
+
+    .button {
+      width: 100%;
+    }
+}

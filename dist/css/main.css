@@ -315,6 +315,14 @@ button:focus,
   text-decoration: none;
   background: #e07436;
 }
+[type='submit'].button-green,
+[type='reset'].button-green,
+[type='button'].button-green,
+button.button-green,
+.button.button-green {
+  background: #4caf50;
+  box-shadow: 0 3px 0 0 #2e9032;
+}
 /* ==========================================================================
    DEFAULT FORM
    ========================================================================== */
@@ -655,6 +663,7 @@ button:focus,
    STEPS
    ========================================================================== */
 .steps {
+  margin-bottom: 158px;
   padding-top: 56px;
   text-align: center;
   background: url('../img/bg/steps.jpg') 0 0 repeat-y;
@@ -722,6 +731,11 @@ button:focus,
   background: #f0862e;
   border-radius: 50%;
 }
+.steps .result {
+  margin-top: -110px;
+  position: relative;
+  bottom: -96px;
+}
 .steps .result .entry {
   position: relative;
 }
@@ -731,10 +745,11 @@ button:focus,
   clear: both;
 }
 .steps .result .entry:nth-of-type(2) {
-  margin-top: -56px;
+  margin-top: -60px;
   margin-right: -20px;
 }
 .steps .result .entry:nth-of-type(2) img {
+  width: 280px;
   float: right;
 }
 .steps .result .entry:nth-of-type(2) .text {
@@ -742,11 +757,11 @@ button:focus,
   right: 0;
   background: #4caf50;
   bottom: auto;
-  top: 18px;
+  top: 24px;
   right: 24px;
 }
 .steps .result img {
-  width: 270px;
+  width: 265px;
   height: auto;
 }
 .steps .result .text {
@@ -761,6 +776,100 @@ button:focus,
   left: 0;
   top: 40px;
   bottom: 0;
+}
+/* ==========================================================================
+   PRODUCT
+   ========================================================================== */
+.product .heading {
+  margin: 0 0 42px;
+  text-align: center;
+  font-size: 56px;
+  line-height: 56px;
+}
+.product .info {
+  margin-bottom: 20px;
+  padding: 6px 0 20px 21px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  border-left: 9px solid #114a7f;
+}
+.product .image {
+  margin-bottom: 100px;
+  position: relative;
+}
+.product .image:before,
+.product .image:after {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  box-sizing: content-box;
+  position: absolute;
+  -webkit-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
+          transform: rotate(-9deg);
+  z-index: 0;
+}
+.product .image:before {
+  width: 147px;
+  border: 46px solid rgba(0, 0, 0, 0);
+  border-top: 140px solid #114a7f;
+  border-bottom: 0 solid #114a7f;
+  right: 26px;
+  bottom: -34px;
+}
+.product .image:after {
+  width: 0;
+  height: 0;
+  border: 120px solid rgba(0, 0, 0, 0);
+  border-bottom: 90px solid #114a7f;
+  right: 53px;
+  bottom: 103px;
+}
+.product .image img {
+  width: 156px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.product .list-check {
+  margin-bottom: 38px;
+  padding: 0;
+  list-style: none;
+}
+.product .list-check li {
+  min-height: 98px;
+  margin-bottom: 16px;
+  padding: 16px 0 16px 96px;
+  position: relative;
+}
+.product .list-check li:before,
+.product .list-check li:after {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  position: absolute;
+}
+.product .list-check li:before {
+  width: 98px;
+  height: 98px;
+  background: url('../img/temp/pentagon.png') 0 0 no-repeat;
+  background-size: cover;
+  left: -15px;
+  top: 0;
+}
+.product .list-check li:after {
+  width: 50px;
+  height: 50px;
+  background: url('../img/temp/ok.png') 0 0 no-repeat;
+  background-size: cover;
+  left: 10px;
+  top: 24px;
+}
+.product .button {
+  width: 100%;
 }
 /* ==========================================================================
    PAGE
