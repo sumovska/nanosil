@@ -32,7 +32,15 @@
         background-position: 51% 0;
     }
     @media @desktop-sm {
-      padding-top: 42px;
+        padding-top: 42px;
+        padding-bottom: 300px;
+        text-align: right;
+        &:before {
+            display: none;
+        }
+        &:after {
+          opacity: .2;
+        }
     }
 
     .wrapper {
@@ -42,7 +50,7 @@
             padding-left: 50%;
         }
         @media @desktop-sm {
-            padding-left: 35%;
+            padding-left: 456px;
         }
     }
 
@@ -60,9 +68,9 @@
             line-height: 42px;
         }
         @media @desktop-sm {
-          margin-bottom: 20px;
-          font-size: 74px;
-          line-height: 54px;
+            margin-bottom: 20px;
+            font-size: 74px;
+            line-height: 54px;
         }
     }
 
@@ -73,11 +81,10 @@
         }
         @media @tablet-sm {
             margin-left: -170px;
-            margin-bottom: -152px;
         }
         @media @desktop-sm {
-          margin-bottom: -156px;
-          margin-left: -18px;
+            margin-left: -18px;
+            text-align: left;
         }
 
         img {
@@ -108,11 +115,11 @@
                 line-height: 42px;
             }
             @media @desktop-sm {
-              margin-top: 26px;
-              padding-right: 20px;
-              padding-bottom: 28px;
-              font-size: 52px;
-line-height: 52px;
+                margin-top: 26px;
+                padding-right: 20px;
+                padding-bottom: 28px;
+                font-size: 52px;
+                line-height: 52px;
             }
         }
     }
@@ -121,10 +128,13 @@ line-height: 52px;
         margin-bottom: 18px;
         @media @tablet-sm {
             margin-bottom: 14px;
+            margin-top: -176px;
             margin-left: 8px;
         }
         @media @desktop-sm {
-          margin-left: 156px;
+            margin-bottom: 18px;
+            margin-left: 156px;
+            margin-top: -180px;
         }
 
         .title {
@@ -139,9 +149,9 @@ line-height: 52px;
                 letter-spacing: .016em;
             }
             @media @desktop-sm {
-              font-size: 52px;
-    line-height: 46px;
-    letter-spacing: .007em;
+                font-size: 52px;
+                line-height: 46px;
+                letter-spacing: .007em;
             }
         }
 
@@ -162,10 +172,10 @@ line-height: 52px;
                 line-height: 14px;
             }
             @media @desktop-sm {
-                  margin-left: -4px;
-                  margin-right: -4px;
-                  font-size: 17px;
-                  line-height: 17px;
+                margin-left: -4px;
+                margin-right: -4px;
+                font-size: 17px;
+                line-height: 17px;
             }
 
             li {
@@ -179,8 +189,8 @@ line-height: 52px;
                     .clearfix;
                 }
                 @media @desktop-sm {
-                  padding-left: 4px;
-                  padding-right: 4px;
+                    padding-left: 4px;
+                    padding-right: 4px;
                 }
             }
 
@@ -242,12 +252,12 @@ line-height: 52px;
                     }
                 }
                 @media @desktop-sm {
-                  margin: 0 4px 7px;
-    font-size: 76px;
-    line-height: 74px;
-                  span {
-                    padding-top: 14px;
-                  }
+                    margin: 0 4px 5px;
+                    font-size: 76px;
+                    line-height: 74px;
+                    span {
+                        padding-top: 14px;
+                    }
                 }
             }
         }
@@ -261,6 +271,12 @@ line-height: 52px;
             line-height: 50px;
             box-shadow: 0 5px 0 0 @color-carrot;
         }
+        @media @desktop-sm {
+            width: auto;
+            padding: 27px 62px 16px;
+            font-size: 61px;
+            line-height: 61px;
+        }
     }
 
     .fn {
@@ -271,6 +287,12 @@ line-height: 52px;
         @media @tablet-sm {
             margin-top: 12px;
             font-size: 15px;
+        }
+        @media @desktop-sm {
+            margin-top: 14px;
+            text-align: right;
+            font-size: 18px;
+            line-height: 20px;
         }
     }
 }

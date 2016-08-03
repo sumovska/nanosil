@@ -426,6 +426,14 @@ button:hover,
 @media (min-width: 1170px) {
   .index {
     padding-top: 42px;
+    padding-bottom: 300px;
+    text-align: right;
+  }
+  .index:before {
+    display: none;
+  }
+  .index:after {
+    opacity: .2;
   }
 }
 .index .wrapper {
@@ -439,7 +447,7 @@ button:hover,
 }
 @media (min-width: 1170px) {
   .index .wrapper {
-    padding-left: 35%;
+    padding-left: 456px;
   }
 }
 .index .heading {
@@ -475,13 +483,12 @@ button:hover,
 @media (min-width: 750px) {
   .index .image {
     margin-left: -170px;
-    margin-bottom: -152px;
   }
 }
 @media (min-width: 1170px) {
   .index .image {
-    margin-bottom: -156px;
     margin-left: -18px;
+    text-align: left;
   }
 }
 .index .image img {
@@ -530,12 +537,15 @@ button:hover,
 @media (min-width: 750px) {
   .index .counter {
     margin-bottom: 14px;
+    margin-top: -176px;
     margin-left: 8px;
   }
 }
 @media (min-width: 1170px) {
   .index .counter {
+    margin-bottom: 18px;
     margin-left: 156px;
+    margin-top: -180px;
   }
 }
 .index .counter .title {
@@ -671,7 +681,7 @@ button:hover,
 }
 @media (min-width: 1170px) {
   .index .counter .line .number {
-    margin: 0 4px 7px;
+    margin: 0 4px 5px;
     font-size: 76px;
     line-height: 74px;
   }
@@ -690,6 +700,14 @@ button:hover,
     box-shadow: 0 5px 0 0 #e07436;
   }
 }
+@media (min-width: 1170px) {
+  .index .button {
+    width: auto;
+    padding: 27px 62px 16px;
+    font-size: 61px;
+    line-height: 61px;
+  }
+}
 .index .fn {
   margin: 6px 0 0;
   text-align: center;
@@ -700,6 +718,14 @@ button:hover,
   .index .fn {
     margin-top: 12px;
     font-size: 15px;
+  }
+}
+@media (min-width: 1170px) {
+  .index .fn {
+    margin-top: 14px;
+    text-align: right;
+    font-size: 18px;
+    line-height: 20px;
   }
 }
 /* ==========================================================================
@@ -820,29 +846,11 @@ button:hover,
   background-size: auto 180%;
   background-color: #114a7f;
   color: #fff;
-  position: relative;
-}
-.effects:before {
-  display: block;
-  content: '\0020';
-  overflow: hidden;
-  background: #114a7f;
-  opacity: .95;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
 }
 @media (min-width: 750px) {
   .effects {
     padding-top: 104px;
   }
-}
-.effects .wrapper {
-  position: relative;
-  z-index: 1;
 }
 .effects .heading {
   margin-top: 0;
