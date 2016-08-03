@@ -136,6 +136,13 @@ h1,
 @media (min-width: 750px) {
   h1,
   .h1 {
+    font-size: 76px;
+    line-height: 68px;
+  }
+}
+@media (min-width: 1170px) {
+  h1,
+  .h1 {
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 120px;
@@ -389,26 +396,40 @@ button:hover,
   background-size: cover;
   position: relative;
 }
-.index:before {
+.index:before,
+.index:after {
   display: block;
   content: '\0020';
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.51);
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+.index:before {
+  background: rgba(255, 255, 255, 0.51);
   z-index: 0;
+}
+.index:after {
+  background: url('../img/patterns/index.jpg') 0 0 repeat;
+  opacity: .5;
+  z-index: 1;
 }
 @media (min-width: 750px) {
   .index {
-    background-position: 50% 50%;
+    padding-top: 76px;
+    background-position: 51% -44px;
   }
 }
 .index .wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+@media (min-width: 750px) {
+  .index .wrapper {
+    padding-left: 50%;
+  }
 }
 .index .heading {
   margin: 0;
@@ -418,6 +439,13 @@ button:hover,
   font: bold 35px/30px 'Bebas Neue', Arial, sans-serif;
   color: #142452;
 }
+@media (min-width: 750px) {
+  .index .slogan {
+    margin-bottom: 0;
+    font-size: 46px;
+    line-height: 42px;
+  }
+}
 .index .image {
   margin-bottom: 24px;
 }
@@ -426,10 +454,22 @@ button:hover,
   content: '\0020';
   clear: both;
 }
+@media (min-width: 750px) {
+  .index .image {
+    margin-left: -170px;
+    margin-bottom: -152px;
+  }
+}
 .index .image img {
   width: 116px;
   height: auto;
   margin: 0 -116px 0 -8px;
+}
+@media (min-width: 750px) {
+  .index .image img {
+    width: 162px;
+    margin: 0 -160px 0 0;
+  }
 }
 .index .image .text {
   margin-top: 25px;
@@ -441,13 +481,38 @@ button:hover,
   text-align: right;
   font: bold 32px/30px 'Bebas Neue', Arial, sans-serif;
 }
+@media (min-width: 750px) {
+  .index .image .text {
+    margin-top: 40px;
+    margin-right: 0;
+    padding: 30px 16px 24px 88px;
+    border-radius: 4px;
+    font-size: 44px;
+    line-height: 42px;
+  }
+}
 .index .counter {
   margin-bottom: 18px;
+}
+@media (min-width: 750px) {
+  .index .counter {
+    margin-bottom: 14px;
+    margin-left: 8px;
+  }
 }
 .index .counter .title {
   margin: 0 0 4px;
   font: 300 35px/30px 'Bebas Neue', Arial, sans-serif;
   color: #114a7f;
+}
+@media (min-width: 750px) {
+  .index .counter .title {
+    margin-bottom: 5px;
+    font-size: 42px;
+    line-height: 38px;
+    text-align: right;
+    letter-spacing: .016em;
+  }
 }
 .index .counter .line {
   margin: 0 -6px;
@@ -461,6 +526,14 @@ button:hover,
   display: table;
   content: '\0020';
   clear: both;
+}
+@media (min-width: 750px) {
+  .index .counter .line {
+    margin-left: -3px;
+    margin-right: -3px;
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 .index .counter .line li {
   width: 33.3%;
@@ -526,14 +599,38 @@ button:hover,
   z-index: -1;
   transform: scale(2) translate3d(-25%, -25%, 0);
 }
+@media (min-width: 750px) {
+  .index .counter .line .number {
+    margin-bottom: 6px;
+    font-size: 64px;
+    line-height: 60px;
+  }
+  .index .counter .line .number span {
+    padding-top: 12px;
+  }
+}
 .index .button {
   width: 100%;
+}
+@media (min-width: 750px) {
+  .index .button {
+    padding: 24px 16px 12px;
+    font-size: 50px;
+    line-height: 50px;
+    box-shadow: 0 5px 0 0 #e07436;
+  }
 }
 .index .fn {
   margin: 6px 0 0;
   text-align: center;
   font: 12px/16px 'Bebas Neue', Arial, sans-serif;
   color: #000;
+}
+@media (min-width: 750px) {
+  .index .fn {
+    margin-top: 12px;
+    font-size: 15px;
+  }
 }
 /* ==========================================================================
    VERIFY

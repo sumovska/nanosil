@@ -343,21 +343,29 @@ button:focus,
   background-size: cover;
   position: relative;
 }
-.index:before {
+.index:before,
+.index:after {
   display: block;
   content: '\0020';
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.51);
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+.index:before {
+  background: rgba(255, 255, 255, 0.51);
   z-index: 0;
+}
+.index:after {
+  background: url('../img/patterns/index.jpg') 0 0 repeat;
+  opacity: .5;
+  z-index: 1;
 }
 .index .wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .index .heading {
   margin: 0;
@@ -650,10 +658,8 @@ button:focus,
   }
   h1,
   .h1 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 120px;
-    line-height: 120px;
+    font-size: 76px;
+    line-height: 68px;
   }
   h2,
   .h2 {
@@ -697,7 +703,76 @@ button:focus,
     margin-bottom: 30px;
   }
   .index {
-    background-position: 50% 50%;
+    padding-top: 76px;
+    background-position: 51% -44px;
+  }
+  .index .wrapper {
+    padding-left: 50%;
+  }
+  .index .slogan {
+    margin-bottom: 0;
+    font-size: 46px;
+    line-height: 42px;
+  }
+  .index .image {
+    margin-left: -170px;
+    margin-bottom: -152px;
+  }
+  .index .image img {
+    width: 162px;
+    margin: 0 -160px 0 0;
+  }
+  .index .image .text {
+    margin-top: 40px;
+    margin-right: 0;
+    padding: 30px 16px 24px 88px;
+    border-radius: 4px;
+    font-size: 44px;
+    line-height: 42px;
+  }
+  .index .counter {
+    margin-bottom: 14px;
+    margin-left: 8px;
+  }
+  .index .counter .title {
+    margin-bottom: 5px;
+    font-size: 42px;
+    line-height: 38px;
+    text-align: right;
+    letter-spacing: .016em;
+  }
+  .index .counter .line {
+    margin-left: -3px;
+    margin-right: -3px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .index .counter .line .number {
+    margin-bottom: 6px;
+    font-size: 64px;
+    line-height: 60px;
+  }
+  .index .counter .line .number span {
+    padding-top: 12px;
+  }
+  .index .button {
+    padding: 24px 16px 12px;
+    font-size: 50px;
+    line-height: 50px;
+    box-shadow: 0 5px 0 0 #e07436;
+  }
+  .index .fn {
+    margin-top: 12px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 1170px) {
+  h1,
+  .h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 120px;
+    line-height: 120px;
   }
 }
 
