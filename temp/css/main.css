@@ -766,6 +766,11 @@ button:hover,
   right: 0;
   z-index: 0;
 }
+@media (min-width: 750px) {
+  .effects {
+    padding-top: 104px;
+  }
+}
 .effects .wrapper {
   position: relative;
   z-index: 1;
@@ -781,15 +786,37 @@ button:hover,
 .effects .heading .color {
   color: #e32000;
 }
+@media (min-width: 750px) {
+  .effects .heading {
+    margin-bottom: 40px;
+    font-size: 82px;
+    line-height: 72px;
+  }
+}
 .effects .list {
+  max-width: 410px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
   font: bold 24px/28px 'Bebas Neue', Arial, sans-serif;
+}
+@media (min-width: 750px) {
+  .effects .list {
+    font-size: 36px;
+    line-height: 33px;
+  }
 }
 .effects .list li {
   margin-bottom: 18px;
   padding: 15px 0 15px 20px;
   position: relative;
+}
+@media (min-width: 750px) {
+  .effects .list li {
+    margin-bottom: 29px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 .effects .list li .hexagon {
   width: 40px;
@@ -821,6 +848,11 @@ button:hover,
   border-width: 34px 0 34px 20px;
   border-color: transparent transparent transparent #ff0000;
   right: -19px;
+}
+@media (min-width: 750px) {
+  .effects .list li .hexagon {
+    top: 0;
+  }
 }
 /* ==========================================================================
    PAGE

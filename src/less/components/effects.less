@@ -20,6 +20,9 @@
         right: 0;
         z-index: 0;
     }
+    @media @tablet-sm {
+      padding-top: 104px;
+    }
 
     .wrapper {
         position: relative;
@@ -36,17 +39,33 @@
         .color {
             color: @color-red-dark;
         }
+        @media @tablet-sm {
+              margin-bottom: 40px;
+          font-size: 82px;
+line-height: 72px;
+        }
     }
 
     .list {
+      max-width: 410px;
+      margin: 0 auto;
         padding: 0;
         list-style: none;
         font: bold 24px/28px @font-heading;
+        @media @tablet-sm {
+          font-size: 36px;
+          line-height: 33px;
+        }
 
         li {
             margin-bottom: 18px;
             padding: 15px 0 15px 20px;
             position: relative;
+            @media @tablet-sm {
+              margin-bottom: 29px;
+              padding-top: 20px;
+              padding-bottom: 20px;
+            }
 
             .hexagon {
                 width: 40px;
@@ -74,6 +93,9 @@
                     border-width: 34px 0 34px 20px;
                     border-color: transparent transparent transparent @color-red;
                     right: -19px;
+                }
+                @media @tablet-sm {
+                  top: 0;
                 }
             }
         }

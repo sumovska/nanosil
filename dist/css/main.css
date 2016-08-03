@@ -604,6 +604,8 @@ button:focus,
   color: #e32000;
 }
 .effects .list {
+  max-width: 410px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
   font: bold 24px/28px 'Bebas Neue', Arial, sans-serif;
@@ -814,6 +816,26 @@ button:focus,
     left: 0;
     right: 0;
     z-index: 1;
+  }
+  .effects {
+    padding-top: 104px;
+  }
+  .effects .heading {
+    margin-bottom: 40px;
+    font-size: 82px;
+    line-height: 72px;
+  }
+  .effects .list {
+    font-size: 36px;
+    line-height: 33px;
+  }
+  .effects .list li {
+    margin-bottom: 29px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .effects .list li .hexagon {
+    top: 0;
   }
 }
 @media (min-width: 1170px) {
