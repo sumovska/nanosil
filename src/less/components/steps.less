@@ -2,18 +2,27 @@
    STEPS
    ========================================================================== */
 .steps {
-    margin-bottom: 158px;
+    margin-bottom: 160px;
     padding-top: 56px;
     text-align: center;
     background: url('@{images}/bg/steps.jpg') 0 0 repeat-y;
     background-size: 300% auto;
     @media @tablet-sm {
+      margin-bottom: 184px;
         padding-top: 64px;
     }
     @media @desktop-sm {
         padding-top: 114px;
         background-size: 150% auto;
         background-position: 0 30px;
+    }
+
+    .wrapper {
+        position: relative;
+        padding-bottom: 376px;
+        @media @tablet-sm {
+          padding-bottom: 280px;
+        }
     }
 
     .heading {
@@ -167,11 +176,13 @@
     }
 
     .result {
-        margin-top: -110px;
-        position: relative;
-        bottom: -96px;
+        position: absolute;
+        bottom: -100px;
+        left: 20px;
+        right: 20px;
         @media @tablet-sm {
             text-align: center;
+            bottom: -84px;
         }
         @media @desktop-sm {
             position: relative;
@@ -189,7 +200,7 @@
                 margin-right: -20px;
 
                 img {
-                  width: 280px;
+                    width: 280px;
                     float: right;
                 }
 
@@ -211,6 +222,9 @@
                     margin-top: 10px;
                     margin-right: 0;
                     margin-left: -52px;
+                    img {
+                        width: 365px;
+                    }
                     .text {
                         top: 35px;
                         right: 64px;

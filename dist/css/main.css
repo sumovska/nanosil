@@ -663,11 +663,15 @@ button.button-green,
    STEPS
    ========================================================================== */
 .steps {
-  margin-bottom: 158px;
+  margin-bottom: 160px;
   padding-top: 56px;
   text-align: center;
   background: url('../img/bg/steps.jpg') 0 0 repeat-y;
   background-size: 300% auto;
+}
+.steps .wrapper {
+  position: relative;
+  padding-bottom: 376px;
 }
 .steps .heading {
   margin-top: 0;
@@ -732,9 +736,10 @@ button.button-green,
   border-radius: 50%;
 }
 .steps .result {
-  margin-top: -110px;
-  position: relative;
-  bottom: -96px;
+  position: absolute;
+  bottom: -100px;
+  left: 20px;
+  right: 20px;
 }
 .steps .result .entry {
   position: relative;
@@ -785,6 +790,9 @@ button.button-green,
   text-align: center;
   font-size: 56px;
   line-height: 56px;
+}
+.product .area {
+  position: relative;
 }
 .product .info {
   margin-bottom: 20px;
@@ -944,6 +952,15 @@ button.button-green,
   textarea {
     height: 180px;
   }
+  [type='submit'],
+  [type='reset'],
+  [type='button'],
+  button,
+  .button {
+    padding: 30px 16px 16px;
+    font-size: 60px;
+    line-height: 60px;
+  }
   .form-group {
     margin-bottom: 30px;
   }
@@ -1070,7 +1087,11 @@ button.button-green,
     top: 0;
   }
   .steps {
+    margin-bottom: 184px;
     padding-top: 64px;
+  }
+  .steps .wrapper {
+    padding-bottom: 280px;
   }
   .steps .heading {
     margin-bottom: 0;
@@ -1092,6 +1113,7 @@ button.button-green,
   }
   .steps .result {
     text-align: center;
+    bottom: -84px;
   }
   .steps .result .entry {
     margin-right: -52px;
@@ -1102,6 +1124,9 @@ button.button-green,
     margin-top: 10px;
     margin-right: 0;
     margin-left: -52px;
+  }
+  .steps .result .entry:nth-of-type(2) img {
+    width: 365px;
   }
   .steps .result .entry:nth-of-type(2) .text {
     top: 35px;
@@ -1114,6 +1139,66 @@ button.button-green,
     left: -10px;
     top: 0;
     bottom: 50px;
+  }
+  .product .heading {
+    margin-bottom: 94px;
+    font-size: 82px;
+    line-height: 82px;
+  }
+  .product .area {
+    padding-left: 310px;
+  }
+  .product .info {
+    margin-left: -84px;
+    margin-bottom: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .product .image img {
+    width: 250px;
+  }
+  .product .image {
+    position: absolute;
+    top: 0;
+    left: -20px;
+  }
+  .product .image:before {
+    width: 238px;
+    border: 72px solid rgba(0, 0, 0, 0);
+    border-top: 220px solid #114a7f;
+    right: -54px;
+    bottom: -65px;
+  }
+  .product .image:after {
+    border: 190px solid rgba(0, 0, 0, 0);
+    border-bottom: 150px solid #114a7f;
+    right: -12px;
+    bottom: 151px;
+  }
+  .product .list-check {
+    margin-bottom: 75px;
+  }
+  .product .list-check li {
+    margin-bottom: 0;
+    padding: 32px 0 32px 140px;
+  }
+  .product .list-check li:before {
+    width: 115px;
+    height: 115px;
+    left: 0;
+  }
+  .product .list-check li:after {
+    width: 55px;
+    height: 55px;
+    left: 35px;
+    top: 28px;
+  }
+  .product .button {
+    width: auto;
+    margin-left: -20px;
+    display: block;
   }
 }
 @media (min-width: 1170px) {

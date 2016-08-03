@@ -7,6 +7,18 @@
         text-align: center;
         font-size: 56px;
         line-height: 56px;
+        @media @tablet-sm {
+            margin-bottom: 94px;
+            font-size: 82px;
+            line-height: 82px;
+        }
+    }
+
+    .area {
+        position: relative;
+        @media @tablet-sm {
+            padding-left: 310px;
+        }
     }
 
     .info {
@@ -16,6 +28,14 @@
         font-size: 20px;
         line-height: 24px;
         border-left: 9px solid @color-blue-dark;
+        @media @tablet-sm {
+            margin-left: -84px;
+            margin-bottom: 30px;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-size: 30px;
+            line-height: 36px;
+        }
     }
 
     .image {
@@ -52,13 +72,38 @@
             display: block;
             position: relative;
             z-index: 1;
+            @media @tablet-sm {
+                width: 250px;
+            }
+        }
+        @media @tablet-sm {
+            position: absolute;
+            top: 0;
+            left: -20px;
+            &:before {
+                width: 238px;
+                width: 238px;
+                border: 72px solid rgba(0, 0, 0, 0);
+                border-top: 220px solid @color-blue-dark;
+                right: -54px;
+                bottom: -65px;
+            }
+            &:after {
+                border: 190px solid rgba(0, 0, 0, 0);
+                border-bottom: 150px solid @color-blue-dark;
+                right: -12px;
+                bottom: 151px;
+            }
         }
     }
 
     .list-check {
-          margin-bottom: 38px;
+        margin-bottom: 38px;
         padding: 0;
         list-style: none;
+        @media @tablet-sm {
+            margin-bottom: 75px;
+        }
 
         li {
             min-height: 98px;
@@ -85,10 +130,30 @@
                 left: 10px;
                 top: 24px;
             }
+            @media @tablet-sm {
+                margin-bottom: 0;
+                padding: 32px 0 32px 140px;
+                &:before {
+                    width: 115px;
+                    height: 115px;
+                    left: 0;
+                }
+                &:after {
+                    width: 55px;
+                    height: 55px;
+                    left: 35px;
+                    top: 28px;
+                }
+            }
         }
     }
 
     .button {
-      width: 100%;
+        width: 100%;
+        @media @tablet-sm {
+          width: auto;
+              margin-left: -20px;
+              display: block;
+        }
     }
 }
