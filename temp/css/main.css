@@ -1335,6 +1335,16 @@ button.button-green,
   margin-bottom: 44px;
   overflow: hidden;
 }
+@media (min-width: 750px) {
+  .product {
+    margin-bottom: 110px;
+  }
+}
+@media (min-width: 1170px) {
+  .product {
+    margin-bottom: 156px;
+  }
+}
 .product .heading {
   margin: 0 0 42px;
   text-align: center;
@@ -1535,6 +1545,19 @@ button.button-green,
   background-size: cover;
   overflow: hidden;
 }
+@media (min-width: 1170px) {
+  .recommendation {
+    padding-top: 140px;
+  }
+}
+.recommendation .wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.recommendation .wrapper > * {
+  position: relative;
+  z-index: 2;
+}
 .recommendation .heading {
   margin-top: 0;
   margin-bottom: 50px;
@@ -1544,6 +1567,18 @@ button.button-green,
 }
 .recommendation .heading .color {
   color: #6e6e6e;
+}
+@media (min-width: 750px) {
+  .recommendation .heading {
+    margin-bottom: 92px;
+    font-size: 68px;
+    line-height: 66px;
+  }
+}
+@media (min-width: 1170px) {
+  .recommendation .heading {
+    margin-bottom: 120px;
+  }
 }
 .recommendation .quote {
   margin: 0 0 30px;
@@ -1569,38 +1604,72 @@ button.button-green,
 .recommendation .quote .author .name {
   display: block;
 }
+@media (min-width: 750px) {
+  .recommendation .quote {
+    margin-left: 50%;
+    margin-bottom: 46px;
+  }
+  .recommendation .quote .author {
+    max-width: 450px;
+  }
+}
+@media (min-width: 1170px) {
+  .recommendation .quote {
+    margin-bottom: 120px;
+    margin-left: 370px;
+    margin-right: 46px;
+    font-size: 20px;
+    line-height: 21px;
+  }
+  .recommendation .quote .author {
+    max-width: none;
+    margin-top: 42px;
+  }
+}
 .recommendation .photo {
   width: 410px;
   height: auto;
-  margin: 0 0 -106px -100px;
+  margin: 0 0 -128px -100px;
+}
+@media (min-width: 750px) {
+  .recommendation .photo {
+    width: 745px;
+    margin: 0;
+    position: absolute;
+    bottom: -76px;
+    left: -220px;
+    z-index: 0;
+  }
 }
 .recommendation .info {
   margin: 0 -20px;
-  padding: 36px 34px;
-  background: #39508d;
+  padding: 56px 34px 28px;
+  background: url('../img/bg/info.png') center center no-repeat;
+  background-size: 200% 100%;
   font: bold 20px/24px 'Bebas Neue', Arial, sans-serif;
   color: #fff;
   text-align: center;
   position: relative;
 }
-.recommendation .info:before,
-.recommendation .info:after {
-  display: block;
-  content: '\0020';
-  overflow: hidden;
-  height: 12px;
-  position: absolute;
-  background: #39508d;
-  transform: skew(0, -2deg);
-  top: -6px;
-  left: 0;
-  right: 0;
-  z-index: 1;
+@media (min-width: 750px) {
+  .recommendation .info {
+    margin: 0 -20px 0 76px;
+    padding: 74px 24px 24px 74px;
+    font-size: 30px;
+    line-height: 29px;
+    background-position: 34px center;
+    background-size: 100% 100%;
+  }
 }
-.recommendation .info:after {
-  opacity: .32;
-  top: -15px;
-  z-index: 0;
+@media (min-width: 1170px) {
+  .recommendation .info {
+    width: 670px;
+    margin: 0;
+    padding-left: 46px;
+    padding-right: 46px;
+    float: right;
+    background-position: center center;
+  }
 }
 /* ==========================================================================
    PAGE
