@@ -1017,6 +1017,11 @@ button:hover,
   background: url('../img/bg/steps.jpg') 0 0 repeat-y;
   background-size: 300% auto;
 }
+@media (min-width: 750px) {
+  .steps {
+    padding-top: 64px;
+  }
+}
 .steps .heading {
   margin-top: 0;
   margin-bottom: 18px;
@@ -1026,12 +1031,27 @@ button:hover,
 .steps .heading .color {
   color: #e07436;
 }
+@media (min-width: 750px) {
+  .steps .heading {
+    margin-bottom: 0;
+    font-size: 82px;
+    line-height: 85px;
+    background-size: 210% auto;
+  }
+}
 .steps .text {
   font-size: 18px;
   line-height: 22px;
 }
 .steps .text .color {
   color: #114a7f;
+  font-weight: 900;
+}
+@media (min-width: 750px) {
+  .steps .text {
+    font-size: 30px;
+    line-height: 34px;
+  }
 }
 .steps .list {
   margin-top: 40px;
@@ -1043,8 +1063,31 @@ button:hover,
   color: #380b08;
   counter-reset: my-badass-counter;
 }
+.steps .list:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+@media (min-width: 750px) {
+  .steps .list {
+    margin: 60px 0 0 0;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
 .steps .list li {
   margin-bottom: 22px;
+}
+@media (min-width: 568px) {
+  .steps .list li {
+    width: 50%;
+    float: left;
+  }
+}
+@media (min-width: 750px) {
+  .steps .list li {
+    margin-bottom: 34px;
+  }
 }
 .steps .list img {
   width: 296px;
@@ -1073,6 +1116,11 @@ button:hover,
   background: #f0862e;
   border-radius: 50%;
 }
+@media (min-width: 750px) {
+  .steps .result {
+    text-align: center;
+  }
+}
 .steps .result .entry {
   position: relative;
 }
@@ -1096,9 +1144,30 @@ button:hover,
   top: 18px;
   right: 24px;
 }
+@media (min-width: 750px) {
+  .steps .result .entry {
+    margin-right: -52px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .steps .result .entry:nth-of-type(2) {
+    margin-top: 10px;
+    margin-right: 0;
+    margin-left: -52px;
+  }
+  .steps .result .entry:nth-of-type(2) .text {
+    top: 35px;
+    right: 64px;
+  }
+}
 .steps .result img {
   width: 270px;
   height: auto;
+}
+@media (min-width: 750px) {
+  .steps .result img {
+    width: 364px;
+  }
 }
 .steps .result .text {
   width: 72px;
@@ -1112,6 +1181,13 @@ button:hover,
   left: 0;
   top: 40px;
   bottom: 0;
+}
+@media (min-width: 750px) {
+  .steps .result .text {
+    left: -10px;
+    top: 0;
+    bottom: 50px;
+  }
 }
 /* ==========================================================================
    PAGE
