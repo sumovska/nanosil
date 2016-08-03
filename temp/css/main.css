@@ -266,7 +266,7 @@ h6 + p,
    CONTAINERS
    ========================================================================== */
 .wrapper {
-  max-width: 1024px;
+  max-width: 1064px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -423,6 +423,11 @@ button:hover,
     background-position: 51% 0;
   }
 }
+@media (min-width: 1170px) {
+  .index {
+    padding-top: 42px;
+  }
+}
 .index .wrapper {
   position: relative;
   z-index: 2;
@@ -430,6 +435,11 @@ button:hover,
 @media (min-width: 750px) {
   .index .wrapper {
     padding-left: 50%;
+  }
+}
+@media (min-width: 1170px) {
+  .index .wrapper {
+    padding-left: 35%;
   }
 }
 .index .heading {
@@ -447,6 +457,13 @@ button:hover,
     line-height: 42px;
   }
 }
+@media (min-width: 1170px) {
+  .index .slogan {
+    margin-bottom: 20px;
+    font-size: 74px;
+    line-height: 54px;
+  }
+}
 .index .image {
   margin-bottom: 24px;
 }
@@ -459,6 +476,12 @@ button:hover,
   .index .image {
     margin-left: -170px;
     margin-bottom: -152px;
+  }
+}
+@media (min-width: 1170px) {
+  .index .image {
+    margin-bottom: -156px;
+    margin-left: -18px;
   }
 }
 .index .image img {
@@ -492,6 +515,15 @@ button:hover,
     line-height: 42px;
   }
 }
+@media (min-width: 1170px) {
+  .index .image .text {
+    margin-top: 26px;
+    padding-right: 20px;
+    padding-bottom: 28px;
+    font-size: 52px;
+    line-height: 52px;
+  }
+}
 .index .counter {
   margin-bottom: 18px;
 }
@@ -499,6 +531,11 @@ button:hover,
   .index .counter {
     margin-bottom: 14px;
     margin-left: 8px;
+  }
+}
+@media (min-width: 1170px) {
+  .index .counter {
+    margin-left: 156px;
   }
 }
 .index .counter .title {
@@ -513,6 +550,13 @@ button:hover,
     line-height: 38px;
     text-align: right;
     letter-spacing: .016em;
+  }
+}
+@media (min-width: 1170px) {
+  .index .counter .title {
+    font-size: 52px;
+    line-height: 46px;
+    letter-spacing: .007em;
   }
 }
 .index .counter .line {
@@ -536,6 +580,14 @@ button:hover,
     line-height: 14px;
   }
 }
+@media (min-width: 1170px) {
+  .index .counter .line {
+    margin-left: -4px;
+    margin-right: -4px;
+    font-size: 17px;
+    line-height: 17px;
+  }
+}
 .index .counter .line li {
   width: 33.3%;
   padding: 0 3px;
@@ -548,6 +600,12 @@ button:hover,
   display: table;
   content: '\0020';
   clear: both;
+}
+@media (min-width: 1170px) {
+  .index .counter .line li {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
 }
 .index .counter .line .number {
   margin: 0 2px 4px;
@@ -605,9 +663,20 @@ button:hover,
     margin-bottom: 6px;
     font-size: 64px;
     line-height: 60px;
+    flex-basis: 40%;
   }
   .index .counter .line .number span {
     padding-top: 12px;
+  }
+}
+@media (min-width: 1170px) {
+  .index .counter .line .number {
+    margin: 0 4px 7px;
+    font-size: 76px;
+    line-height: 74px;
+  }
+  .index .counter .line .number span {
+    padding-top: 14px;
   }
 }
 .index .button {
