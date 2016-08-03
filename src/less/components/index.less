@@ -44,9 +44,11 @@
     }
 
     .wrapper {
+      max-width: 410px;
         position: relative;
         z-index: 2;
         @media @tablet-sm {
+          max-width: @max-width;
             padding-left: 50%;
         }
         @media @desktop-sm {
@@ -106,9 +108,12 @@
             color: @color-white;
             text-align: right;
             font: bold 32px/30px @font-heading;
+            @media @mobile-md {
+              width: 96%;
+              margin-right: 0;
+            }
             @media @tablet-sm {
                 margin-top: 40px;
-                margin-right: 0;
                 padding: 30px 16px 24px 88px;
                 border-radius: 4px;
                 font-size: 44px;
@@ -259,6 +264,11 @@
                         padding-top: 14px;
                     }
                 }
+            }
+
+            .text {
+              width: 100%;
+              flex-basis: 100%;
             }
         }
     }

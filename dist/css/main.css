@@ -364,6 +364,7 @@ button:focus,
   z-index: 1;
 }
 .index .wrapper {
+  max-width: 410px;
   position: relative;
   z-index: 2;
 }
@@ -493,6 +494,11 @@ button:focus,
   z-index: -1;
   -webkit-transform: scale(2) translate3d(-25%, -25%, 0);
           transform: scale(2) translate3d(-25%, -25%, 0);
+}
+.index .counter .line .text {
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 .index .button {
   width: 100%;
@@ -650,6 +656,18 @@ button:focus,
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+@media (min-width: 568px) {
+  .index .image .text {
+    width: 96%;
+    margin-right: 0;
+  }
+  .verify .list li {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
 @media (min-width: 750px) {
   p,
   ul,
@@ -710,6 +728,7 @@ button:focus,
     background-position: 51% 0;
   }
   .index .wrapper {
+    max-width: 1064px;
     padding-left: 50%;
   }
   .index .slogan {
@@ -726,7 +745,6 @@ button:focus,
   }
   .index .image .text {
     margin-top: 40px;
-    margin-right: 0;
     padding: 30px 16px 24px 88px;
     border-radius: 4px;
     font-size: 44px;
