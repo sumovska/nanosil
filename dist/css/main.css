@@ -579,6 +579,10 @@ button:focus,
   background-color: #114a7f;
   color: #fff;
 }
+.effects .wrapper {
+  position: relative;
+  z-index: 1;
+}
 .effects .heading {
   margin-top: 0;
   margin-bottom: 28px;
@@ -596,6 +600,11 @@ button:focus,
   padding: 0;
   list-style: none;
   font: bold 24px/28px 'Bebas Neue', Arial, sans-serif;
+}
+.effects .list:after {
+  display: table;
+  content: '\0020';
+  clear: both;
 }
 .effects .list li {
   margin-bottom: 18px;
@@ -905,6 +914,25 @@ button:focus,
   }
   .verify .list li:nth-child(2) {
     margin-right: 124px;
+  }
+  .effects {
+    padding-top: 160px;
+  }
+  .effects .heading {
+    margin-bottom: 128px;
+  }
+  .effects .list {
+    max-width: none;
+  }
+  .effects .list li {
+    width: 50%;
+    float: left;
+    margin-bottom: 46px;
+    padding-left: 85px;
+    padding-right: 35px;
+  }
+  .effects .list li .hexagon {
+    left: 65px;
   }
 }
 

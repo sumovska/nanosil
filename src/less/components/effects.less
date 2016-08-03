@@ -9,7 +9,15 @@
     background-color: @color-blue-dark;
     color: @color-white;
     @media @tablet-sm {
-      padding-top: 104px;
+        padding-top: 104px;
+    }
+    @media @desktop-sm {
+        padding-top: 160px;
+    }
+
+    .wrapper {
+        position: relative;
+        z-index: 1;
     }
 
     .heading {
@@ -23,21 +31,30 @@
             color: @color-red-dark;
         }
         @media @tablet-sm {
-              margin-bottom: 40px;
-          font-size: 82px;
-line-height: 72px;
+            margin-bottom: 40px;
+            font-size: 82px;
+            line-height: 72px;
+        }
+        @media @desktop-sm {
+            margin-bottom: 128px;
         }
     }
 
     .list {
-      max-width: 410px;
-      margin: 0 auto;
+        max-width: 410px;
+        margin: 0 auto;
         padding: 0;
         list-style: none;
         font: bold 24px/28px @font-heading;
+        &:after {
+            .clearfix;
+        }
         @media @tablet-sm {
-          font-size: 36px;
-          line-height: 33px;
+            font-size: 36px;
+            line-height: 33px;
+        }
+        @media @desktop-sm {
+            max-width: none;
         }
 
         li {
@@ -45,9 +62,16 @@ line-height: 72px;
             padding: 15px 0 15px 20px;
             position: relative;
             @media @tablet-sm {
-              margin-bottom: 29px;
-              padding-top: 20px;
-              padding-bottom: 20px;
+                margin-bottom: 29px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            @media @desktop-sm {
+                width: 50%;
+                float: left;
+                margin-bottom: 46px;
+                padding-left: 85px;
+                padding-right: 35px;
             }
 
             .hexagon {
@@ -78,7 +102,10 @@ line-height: 72px;
                     right: -19px;
                 }
                 @media @tablet-sm {
-                  top: 0;
+                    top: 0;
+                }
+                @media @desktop-sm {
+                    left: 65px;
                 }
             }
         }

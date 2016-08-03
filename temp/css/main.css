@@ -871,6 +871,15 @@ button:hover,
     padding-top: 104px;
   }
 }
+@media (min-width: 1170px) {
+  .effects {
+    padding-top: 160px;
+  }
+}
+.effects .wrapper {
+  position: relative;
+  z-index: 1;
+}
 .effects .heading {
   margin-top: 0;
   margin-bottom: 28px;
@@ -889,6 +898,11 @@ button:hover,
     line-height: 72px;
   }
 }
+@media (min-width: 1170px) {
+  .effects .heading {
+    margin-bottom: 128px;
+  }
+}
 .effects .list {
   max-width: 410px;
   margin: 0 auto;
@@ -896,10 +910,20 @@ button:hover,
   list-style: none;
   font: bold 24px/28px 'Bebas Neue', Arial, sans-serif;
 }
+.effects .list:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
 @media (min-width: 750px) {
   .effects .list {
     font-size: 36px;
     line-height: 33px;
+  }
+}
+@media (min-width: 1170px) {
+  .effects .list {
+    max-width: none;
   }
 }
 .effects .list li {
@@ -912,6 +936,15 @@ button:hover,
     margin-bottom: 29px;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+}
+@media (min-width: 1170px) {
+  .effects .list li {
+    width: 50%;
+    float: left;
+    margin-bottom: 46px;
+    padding-left: 85px;
+    padding-right: 35px;
   }
 }
 .effects .list li .hexagon {
@@ -948,6 +981,11 @@ button:hover,
 @media (min-width: 750px) {
   .effects .list li .hexagon {
     top: 0;
+  }
+}
+@media (min-width: 1170px) {
+  .effects .list li .hexagon {
+    left: 65px;
   }
 }
 /* ==========================================================================
