@@ -377,9 +377,17 @@ button.button-green,
   [type='button'],
   button,
   .button {
-    padding: 30px 16px 16px;
+    padding: 30px 66px 16px;
     font-size: 60px;
     line-height: 60px;
+    box-shadow: 0 5px 0 0 #e07436;
+  }
+  [type='submit'].button-green,
+  [type='reset'].button-green,
+  [type='button'].button-green,
+  button.button-green,
+  .button.button-green {
+    box-shadow: 0 5px 0 0 #2e9032;
   }
 }
 /* ==========================================================================
@@ -1060,6 +1068,11 @@ button.button-green,
     padding-bottom: 280px;
   }
 }
+@media (min-width: 1170px) {
+  .steps .wrapper {
+    padding-bottom: 110px;
+  }
+}
 .steps .heading {
   margin-top: 0;
   margin-bottom: 18px;
@@ -1234,8 +1247,7 @@ button.button-green,
 }
 @media (min-width: 1170px) {
   .steps .result {
-    position: relative;
-    top: -176px;
+    bottom: -64px;
   }
 }
 .steps .result .entry {
@@ -1318,6 +1330,9 @@ button.button-green,
 /* ==========================================================================
    PRODUCT
    ========================================================================== */
+.product {
+  overflow: hidden;
+}
 .product .heading {
   margin: 0 0 42px;
   text-align: center;
@@ -1331,12 +1346,23 @@ button.button-green,
     line-height: 82px;
   }
 }
+@media (min-width: 1170px) {
+  .product .heading {
+    margin-bottom: 98px;
+  }
+}
 .product .area {
   position: relative;
 }
 @media (min-width: 750px) {
   .product .area {
     padding-left: 310px;
+  }
+}
+@media (min-width: 1170px) {
+  .product .area {
+    padding-top: 14px;
+    padding-left: 394px;
   }
 }
 .product .info {
@@ -1357,35 +1383,32 @@ button.button-green,
     line-height: 36px;
   }
 }
+@media (min-width: 1170px) {
+  .product .info {
+    margin-top: 0;
+    margin-bottom: 94px;
+    margin-left: -94px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
 .product .image {
   margin-bottom: 100px;
   position: relative;
 }
-.product .image:before,
-.product .image:after {
+.product .image:before {
   display: block;
   content: '\0020';
   overflow: hidden;
-  box-sizing: content-box;
+  width: 235px;
+  height: 235px;
+  margin: 0 auto;
+  background: url('../img/temp/pentagon-l.png') 0 0 no-repeat;
+  background-size: cover;
   position: absolute;
-  transform: rotate(-9deg);
+  bottom: -48px;
+  left: 0;
   z-index: 0;
-}
-.product .image:before {
-  width: 147px;
-  border: 46px solid rgba(0, 0, 0, 0);
-  border-top: 140px solid #114a7f;
-  border-bottom: 0 solid #114a7f;
-  right: 26px;
-  bottom: -34px;
-}
-.product .image:after {
-  width: 0;
-  height: 0;
-  border: 120px solid rgba(0, 0, 0, 0);
-  border-bottom: 90px solid #114a7f;
-  right: 53px;
-  bottom: 103px;
 }
 .product .image img {
   width: 156px;
@@ -1404,20 +1427,14 @@ button.button-green,
   .product .image {
     position: absolute;
     top: 0;
-    left: -20px;
+    left: 0;
   }
   .product .image:before {
-    width: 238px;
-    border: 72px solid rgba(0, 0, 0, 0);
-    border-top: 220px solid #114a7f;
-    right: -54px;
-    bottom: -65px;
-  }
-  .product .image:after {
-    border: 190px solid rgba(0, 0, 0, 0);
-    border-bottom: 150px solid #114a7f;
-    right: -12px;
-    bottom: 151px;
+    width: 380px;
+    height: 380px;
+    bottom: -74px;
+    right: -35px;
+    left: auto;
   }
 }
 .product .list-check {
@@ -1428,6 +1445,15 @@ button.button-green,
 @media (min-width: 750px) {
   .product .list-check {
     margin-bottom: 75px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 1170px) {
+  .product .list-check {
+    margin-bottom: 120px;
+    font-size: 24px;
+    line-height: 28px;
   }
 }
 .product .list-check li {
@@ -1462,7 +1488,7 @@ button.button-green,
 @media (min-width: 750px) {
   .product .list-check li {
     margin-bottom: 0;
-    padding: 32px 0 32px 140px;
+    padding: 32px 0 32px 136px;
   }
   .product .list-check li:before {
     width: 115px;
@@ -1476,6 +1502,12 @@ button.button-green,
     top: 28px;
   }
 }
+@media (min-width: 1170px) {
+  .product .list-check li {
+    margin-bottom: 34px;
+    padding: 35px 0 35px 138px;
+  }
+}
 .product .button {
   width: 100%;
 }
@@ -1484,6 +1516,12 @@ button.button-green,
     width: auto;
     margin-left: -20px;
     display: block;
+  }
+}
+@media (min-width: 1170px) {
+  .product .button {
+    margin-left: -100px;
+    display: inline-block;
   }
 }
 /* ==========================================================================

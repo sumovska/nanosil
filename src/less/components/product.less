@@ -2,6 +2,8 @@
    PRODUCT
    ========================================================================== */
 .product {
+    overflow: hidden;
+
     .heading {
         margin: 0 0 42px;
         text-align: center;
@@ -12,12 +14,19 @@
             font-size: 82px;
             line-height: 82px;
         }
+        @media @desktop-sm {
+            margin-bottom: 98px;
+        }
     }
 
     .area {
         position: relative;
         @media @tablet-sm {
             padding-left: 310px;
+        }
+        @media @desktop-sm {
+            padding-top: 14px;
+            padding-left: 394px;
         }
     }
 
@@ -36,33 +45,29 @@
             font-size: 30px;
             line-height: 36px;
         }
+        @media @desktop-sm {
+            margin-top: 0;
+            margin-bottom: 94px;
+            margin-left: -94px;
+            font-size: 36px;
+            line-height: 44px;
+        }
     }
 
     .image {
         margin-bottom: 100px;
         position: relative;
-        &:before, &:after {
-            .pseudo;
-            box-sizing: content-box;
-            position: absolute;
-            transform: rotate(-9deg);
-            z-index: 0;
-        }
         &:before {
-            width: 147px;
-            border: 46px solid rgba(0, 0, 0, 0);
-            border-top: 140px solid @color-blue-dark;
-            border-bottom: 0 solid @color-blue-dark;
-            right: 26px;
-            bottom: -34px;
-        }
-        &:after {
-            width: 0;
-            height: 0;
-            border: 120px solid rgba(0, 0, 0, 0);
-            border-bottom: 90px solid @color-blue-dark;
-            right: 53px;
-            bottom: 103px;
+            .pseudo;
+            width: 235px;
+            height: 235px;
+            margin: 0 auto;
+            background: url('@{images}/temp/pentagon-l.png') 0 0 no-repeat;
+            background-size: cover;
+            position: absolute;
+            bottom: -48px;
+            left: 0;
+            z-index: 0;
         }
 
         img {
@@ -79,20 +84,13 @@
         @media @tablet-sm {
             position: absolute;
             top: 0;
-            left: -20px;
+            left: 0;
             &:before {
-                width: 238px;
-                width: 238px;
-                border: 72px solid rgba(0, 0, 0, 0);
-                border-top: 220px solid @color-blue-dark;
-                right: -54px;
-                bottom: -65px;
-            }
-            &:after {
-                border: 190px solid rgba(0, 0, 0, 0);
-                border-bottom: 150px solid @color-blue-dark;
-                right: -12px;
-                bottom: 151px;
+                width: 380px;
+                height: 380px;
+                bottom: -74px;
+                right: -35px;
+                left: auto;
             }
         }
     }
@@ -103,6 +101,13 @@
         list-style: none;
         @media @tablet-sm {
             margin-bottom: 75px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        @media @desktop-sm {
+            margin-bottom: 120px;
+            font-size: 24px;
+            line-height: 28px;
         }
 
         li {
@@ -132,7 +137,7 @@
             }
             @media @tablet-sm {
                 margin-bottom: 0;
-                padding: 32px 0 32px 140px;
+                padding: 32px 0 32px 136px;
                 &:before {
                     width: 115px;
                     height: 115px;
@@ -145,15 +150,23 @@
                     top: 28px;
                 }
             }
+            @media @desktop-sm {
+                margin-bottom: 34px;
+                padding: 35px 0 35px 138px;
+            }
         }
     }
 
     .button {
         width: 100%;
         @media @tablet-sm {
-          width: auto;
-              margin-left: -20px;
-              display: block;
+            width: auto;
+            margin-left: -20px;
+            display: block;
+        }
+        @media @desktop-sm {
+            margin-left: -100px;
+            display: inline-block;
         }
     }
 }

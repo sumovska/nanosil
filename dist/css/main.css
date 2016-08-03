@@ -785,6 +785,9 @@ button.button-green,
 /* ==========================================================================
    PRODUCT
    ========================================================================== */
+.product {
+  overflow: hidden;
+}
 .product .heading {
   margin: 0 0 42px;
   text-align: center;
@@ -806,33 +809,19 @@ button.button-green,
   margin-bottom: 100px;
   position: relative;
 }
-.product .image:before,
-.product .image:after {
+.product .image:before {
   display: block;
   content: '\0020';
   overflow: hidden;
-  box-sizing: content-box;
+  width: 235px;
+  height: 235px;
+  margin: 0 auto;
+  background: url('../img/temp/pentagon-l.png') 0 0 no-repeat;
+  background-size: cover;
   position: absolute;
-  -webkit-transform: rotate(-9deg);
-      -ms-transform: rotate(-9deg);
-          transform: rotate(-9deg);
+  bottom: -48px;
+  left: 0;
   z-index: 0;
-}
-.product .image:before {
-  width: 147px;
-  border: 46px solid rgba(0, 0, 0, 0);
-  border-top: 140px solid #114a7f;
-  border-bottom: 0 solid #114a7f;
-  right: 26px;
-  bottom: -34px;
-}
-.product .image:after {
-  width: 0;
-  height: 0;
-  border: 120px solid rgba(0, 0, 0, 0);
-  border-bottom: 90px solid #114a7f;
-  right: 53px;
-  bottom: 103px;
 }
 .product .image img {
   width: 156px;
@@ -957,9 +946,17 @@ button.button-green,
   [type='button'],
   button,
   .button {
-    padding: 30px 16px 16px;
+    padding: 30px 66px 16px;
     font-size: 60px;
     line-height: 60px;
+    box-shadow: 0 5px 0 0 #e07436;
+  }
+  [type='submit'].button-green,
+  [type='reset'].button-green,
+  [type='button'].button-green,
+  button.button-green,
+  .button.button-green {
+    box-shadow: 0 5px 0 0 #2e9032;
   }
   .form-group {
     margin-bottom: 30px;
@@ -1162,27 +1159,23 @@ button.button-green,
   .product .image {
     position: absolute;
     top: 0;
-    left: -20px;
+    left: 0;
   }
   .product .image:before {
-    width: 238px;
-    border: 72px solid rgba(0, 0, 0, 0);
-    border-top: 220px solid #114a7f;
-    right: -54px;
-    bottom: -65px;
-  }
-  .product .image:after {
-    border: 190px solid rgba(0, 0, 0, 0);
-    border-bottom: 150px solid #114a7f;
-    right: -12px;
-    bottom: 151px;
+    width: 380px;
+    height: 380px;
+    bottom: -74px;
+    right: -35px;
+    left: auto;
   }
   .product .list-check {
     margin-bottom: 75px;
+    font-size: 18px;
+    line-height: 22px;
   }
   .product .list-check li {
     margin-bottom: 0;
-    padding: 32px 0 32px 140px;
+    padding: 32px 0 32px 136px;
   }
   .product .list-check li:before {
     width: 115px;
@@ -1314,6 +1307,9 @@ button.button-green,
     background-size: 150% auto;
     background-position: 0 30px;
   }
+  .steps .wrapper {
+    padding-bottom: 110px;
+  }
   .steps .heading {
     margin-bottom: 6px;
   }
@@ -1362,11 +1358,37 @@ button.button-green,
     max-width: none;
   }
   .steps .result {
-    position: relative;
-    top: -176px;
+    bottom: -64px;
   }
   .steps .result .entry:first-of-type {
     margin-left: -40px;
+  }
+  .product .heading {
+    margin-bottom: 98px;
+  }
+  .product .area {
+    padding-top: 14px;
+    padding-left: 394px;
+  }
+  .product .info {
+    margin-top: 0;
+    margin-bottom: 94px;
+    margin-left: -94px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .product .list-check {
+    margin-bottom: 120px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .product .list-check li {
+    margin-bottom: 34px;
+    padding: 35px 0 35px 138px;
+  }
+  .product .button {
+    margin-left: -100px;
+    display: inline-block;
   }
 }
 @media (min-width: 1380px) {
