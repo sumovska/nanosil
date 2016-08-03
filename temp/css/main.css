@@ -162,7 +162,7 @@ h2,
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 95px;
-    line-height: 64px;
+    line-height: 86px;
   }
 }
 h3,
@@ -338,7 +338,7 @@ textarea {
 [type='button'],
 button,
 .button {
-  padding: 18px 16px 10px;
+  padding: 18px 16px 14px;
   border: none;
   border-radius: 4px;
   display: inline-block;
@@ -729,6 +729,7 @@ button.button-green,
 }
 .index .button {
   width: 100%;
+  padding-bottom: 10px;
 }
 @media (min-width: 750px) {
   .index .button {
@@ -1331,6 +1332,7 @@ button.button-green,
    PRODUCT
    ========================================================================== */
 .product {
+  margin-bottom: 44px;
   overflow: hidden;
 }
 .product .heading {
@@ -1523,6 +1525,82 @@ button.button-green,
     margin-left: -100px;
     display: inline-block;
   }
+}
+/* ==========================================================================
+   RECOMMENDATION
+   ========================================================================== */
+.recommendation {
+  padding-top: 65px;
+  background: url('../img/bg/recommendation.jpg') 0 0 no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.recommendation .heading {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 46px;
+  line-height: 46px;
+  text-align: center;
+}
+.recommendation .heading .color {
+  color: #6e6e6e;
+}
+.recommendation .quote {
+  margin: 0 0 30px;
+  font-size: 18px;
+  line-height: 21px;
+}
+.recommendation .quote:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.recommendation .quote p {
+  margin-bottom: 20px;
+}
+.recommendation .quote .author {
+  max-width: 250px;
+  margin-top: 44px;
+  margin-bottom: 0;
+  font-style: italic;
+  text-align: right;
+  float: right;
+}
+.recommendation .quote .author .name {
+  display: block;
+}
+.recommendation .photo {
+  width: 410px;
+  height: auto;
+  margin: 0 0 -106px -100px;
+}
+.recommendation .info {
+  margin: 0 -20px;
+  padding: 36px 34px;
+  background: #39508d;
+  font: bold 20px/24px 'Bebas Neue', Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.recommendation .info:before,
+.recommendation .info:after {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  height: 12px;
+  position: absolute;
+  background: #39508d;
+  transform: skew(0, -2deg);
+  top: -6px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.recommendation .info:after {
+  opacity: .32;
+  top: -15px;
+  z-index: 0;
 }
 /* ==========================================================================
    PAGE

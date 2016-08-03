@@ -1,0 +1,75 @@
+/* ==========================================================================
+   RECOMMENDATION
+   ========================================================================== */
+.recommendation {
+    padding-top: 65px;
+    background: url('@{images}/bg/recommendation.jpg') 0 0 no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    .heading {
+        margin-top: 0;
+        margin-bottom: 50px;
+        font-size: 46px;
+        line-height: 46px;
+        text-align: center;
+        .color {
+            color: @color-gray;
+        }
+    }
+
+    .quote {
+        margin: 0 0 30px;
+        font-size: 18px;
+        line-height: 21px;
+        &:after {
+            .clearfix;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .author {
+            max-width: 250px;
+            margin-top: 44px;
+            margin-bottom: 0;
+            font-style: italic;
+            text-align: right;
+            float: right;
+            .name {
+                display: block;
+            }
+        }
+    }
+
+    .photo {
+        width: 410px;
+        height: auto;
+        margin: 0 0 -106px -100px;
+    }
+
+    .info {
+        margin: 0 -20px;
+        padding: 36px 34px;
+        background: @color-blue-light;
+        font: bold 20px/24px @font-heading;
+        color: @color-white;
+        text-align: center;
+        position: relative;
+        &:before, &:after {
+            .pseudo;
+            height: 12px;
+            position: absolute;
+            background: @color-blue-light;
+            transform: skew(0, -2deg);
+            top: -6px;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        &:after {
+            opacity: .32;
+            top: -15px;
+            z-index: 0;
+        }
+    }
+}
