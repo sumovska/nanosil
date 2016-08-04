@@ -2,14 +2,43 @@
    FEEDBACK
    ========================================================================== */
 .feedback {
-    padding-top: 54px;
+    padding-top: 383px;
     padding-bottom: 54px;
+    position: relative;
+    cursor: default;
     @media @tablet-sm {
-      padding-top: 92px;
+        padding-top: 115px;
     }
     @media @desktop-sm {
-        padding-top: 122px;
+        padding-top: 120px;
         padding-bottom: 100px;
+    }
+
+    .photo {
+        width: 320px;
+        height: auto;
+        margin: auto;
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        left: -12px;
+        z-index: 0;
+        @media @tablet-sm {
+            width: 445px;
+            height: auto;
+            margin-left: -470px;
+            left: 50%;
+            right: auto;
+            top: 18px;
+            user-select: none;
+        }
+        @media @desktop-sm {
+            width: 527px;
+            height: 610px;
+            margin-left: -493px;
+            top: 0;
+        }
     }
 
     .heading {
@@ -18,7 +47,8 @@
         @media @desktop-sm {
             margin: 0;
             font-size: 96px;
-            line-height: 82px;
+            line-height: 80px;
+            letter-spacing: .0025em;
         }
     }
 
@@ -46,18 +76,21 @@
             margin-bottom: 36px;
             font-size: 59px;
             line-height: 59px;
+            letter-spacing: .0025em;
+            white-space: nowrap;
         }
     }
 
     .counter {
-      max-width: 340px;
+        max-width: 340px;
         margin: 0 auto 24px;
         cursor: default;
         user-select: none;
         @media @tablet-sm {
-              float: right;
+            float: right;
         }
         @media @desktop-sm {
+            width: 340px;
             margin-bottom: 55px;
         }
 
@@ -73,7 +106,8 @@
                 letter-spacing: -.006em;
             }
             @media @desktop-sm {
-                font-size: 40px;
+                margin-right: 3px;
+                font-size: 42px;
                 line-height: 42px;
             }
         }
@@ -175,7 +209,7 @@
                     }
                 }
                 @media @desktop-sm {
-                    margin: 0 4px 5px;
+                    margin: 0 4px 8px;
                     font-size: 64px;
                     line-height: 54px;
                     span {
@@ -216,7 +250,7 @@
         @media @tablet-md {
             width: 530px;
             margin-left: 50px;
-            padding: 32px 20px 28px;
+            padding: 32px 18px 27px;
             font-size: 52px;
             line-height: 52px;
             .pic {
@@ -230,17 +264,19 @@
             }
         }
         @media @desktop-sm {
-          margin-left: 90px;
+            margin-left: 83px;
         }
     }
 
     .form-feedback {
-      max-width: 450px;
-      margin-left: auto;
-      margin-right: auto;
-      @media @tablet-sm {
-        max-width: none;
-      }
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 5;
+        @media @tablet-sm {
+            max-width: none;
+        }
         @media @desktop-sm {
             padding-left: 20px;
             padding-right: 20px;
@@ -282,9 +318,9 @@
             }
         }
         .submit {
-          width: 100%;
-          margin: 0 auto;
-          display: block;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
             white-space: normal;
             font-size: 32px;
             line-height: 30px;
@@ -303,11 +339,13 @@
                     line-height: 40px;
                 }
                 .small {
-                  display: inline;
+                    display: inline;
                 }
             }
             @media @desktop-sm {
+                width: 952px;
                 padding: 48px 22px 42px;
+                float: right;
                 &, .small {
                     font-size: 54px;
                     line-height: 54px;

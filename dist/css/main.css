@@ -224,13 +224,14 @@ legend {
 [type='email'],
 textarea {
   width: 100%;
-  padding: 20px 10px 18px;
+  padding: 21px 10px 16px;
   border: 1px solid #e5e5e5;
   box-shadow: 0 0 1px 0 #e5e5e5;
   border-radius: 0;
   display: inline-block;
   vertical-align: middle;
-  font: 18px/18px 'Bebas Neue', Arial, sans-serif;
+  font: 19px 'Bebas Neue', Arial, sans-serif;
+  letter-spacing: -0.0025em;
   color: #b2b2b2;
   background: transparent;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1231,12 +1232,21 @@ button.button-green:focus,
   border-bottom: 1px solid #e5e5e5;
   margin: 0 -20px;
 }
+.testimonials .list .entry:last-child {
+  border: none;
+}
 .testimonials .list .photo {
+  margin: 0 auto;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.testimonials .list .photo:after {
+  display: table;
+  content: '\0020';
+  clear: both;
 }
 .testimonials .list .photo .before,
 .testimonials .list .photo .after {
@@ -1297,8 +1307,21 @@ button.button-green:focus,
    FEEDBACK
    ========================================================================== */
 .feedback {
-  padding-top: 54px;
+  padding-top: 383px;
   padding-bottom: 54px;
+  position: relative;
+  cursor: default;
+}
+.feedback .photo {
+  width: 320px;
+  height: auto;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: -12px;
+  z-index: 0;
 }
 .feedback .heading {
   margin-top: 30px;
@@ -1446,6 +1469,8 @@ button.button-green:focus,
   max-width: 450px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 5;
 }
 .feedback .form-feedback .form-group {
   margin-bottom: 8px;
@@ -2014,8 +2039,69 @@ button.button-green:focus,
     left: -20px;
     top: -16px;
   }
+  .testimonials {
+    padding-top: 95px;
+    padding-bottom: 40px;
+  }
+  .testimonials .heading {
+    font-size: 65px;
+    line-height: 70px;
+  }
+  .testimonials .list .entry {
+    padding-top: 65px;
+    padding-bottom: 45px;
+  }
+  .testimonials .list .photo {
+    width: 490px;
+  }
+  .testimonials .list .photo .before,
+  .testimonials .list .photo .after {
+    width: 240px;
+    height: 240px;
+  }
+  .testimonials .list .photo .before {
+    margin-bottom: 0;
+    float: left;
+  }
+  .testimonials .list .photo .before .badge {
+    top: -32px;
+    left: -36px;
+  }
+  .testimonials .list .photo .after {
+    float: right;
+  }
+  .testimonials .list .photo .after .badge {
+    top: -32px;
+    right: -36px;
+  }
+  .testimonials .list .photo img {
+    width: 240px;
+    height: 240px;
+  }
+  .testimonials .list .photo .badge {
+    width: 72px;
+    height: 72px;
+    font-size: 24px;
+    line-height: 74px;
+  }
+  .testimonials .list .title {
+    max-width: 400px;
+    margin: 32px auto 21px;
+  }
   .feedback {
-    padding-top: 92px;
+    padding-top: 115px;
+  }
+  .feedback .photo {
+    width: 445px;
+    height: auto;
+    margin-left: -470px;
+    left: 50%;
+    right: auto;
+    top: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   .feedback .heading {
     font-size: 76px;
@@ -2089,7 +2175,7 @@ button.button-green:focus,
   .feedback .price {
     width: 530px;
     margin-left: 50px;
-    padding: 32px 20px 28px;
+    padding: 32px 18px 27px;
     font-size: 52px;
     line-height: 52px;
   }
@@ -2382,8 +2468,14 @@ button.button-green:focus,
     margin-left: 158px;
   }
   .feedback {
-    padding-top: 122px;
+    padding-top: 120px;
     padding-bottom: 100px;
+  }
+  .feedback .photo {
+    width: 527px;
+    height: 610px;
+    margin-left: -493px;
+    top: 0;
   }
   .feedback .heading {
     margin-top: 40px;
@@ -2394,7 +2486,8 @@ button.button-green:focus,
   .feedback .heading {
     margin: 0;
     font-size: 96px;
-    line-height: 82px;
+    line-height: 80px;
+    letter-spacing: .0025em;
   }
   .feedback .area {
     padding-left: 516px;
@@ -2404,12 +2497,16 @@ button.button-green:focus,
     margin-bottom: 36px;
     font-size: 59px;
     line-height: 59px;
+    letter-spacing: .0025em;
+    white-space: nowrap;
   }
   .feedback .counter {
+    width: 340px;
     margin-bottom: 55px;
   }
   .feedback .counter .title {
-    font-size: 40px;
+    margin-right: 3px;
+    font-size: 42px;
     line-height: 42px;
   }
   .feedback .counter .line {
@@ -2423,7 +2520,7 @@ button.button-green:focus,
     padding-right: 4px;
   }
   .feedback .counter .line .number {
-    margin: 0 4px 5px;
+    margin: 0 4px 8px;
     font-size: 64px;
     line-height: 54px;
   }
@@ -2431,7 +2528,7 @@ button.button-green:focus,
     padding-top: 14px;
   }
   .feedback .price {
-    margin-left: 90px;
+    margin-left: 83px;
   }
   .feedback .form-feedback {
     padding-left: 20px;
@@ -2444,7 +2541,9 @@ button.button-green:focus,
     margin-right: 0;
   }
   .feedback .form-feedback .submit {
+    width: 952px;
     padding: 48px 22px 42px;
+    float: right;
   }
   .feedback .form-feedback .submit,
   .feedback .form-feedback .submit .small {
