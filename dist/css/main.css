@@ -1473,9 +1473,10 @@ button.button-green,
   }
   .features .list li {
     min-height: 140px;
-    margin-bottom: -35px;
+    margin-bottom: -15px;
     padding-left: 140px;
-    padding-top: 40px;
+    padding-right: 140px;
+    padding-top: 20px;
   }
   .features .list li:before,
   .features .list li:after {
@@ -1512,6 +1513,13 @@ button.button-green,
   }
   .features .list li:nth-child(3) {
     margin-left: 30px;
+  }
+  .features .list li:nth-child(3):before {
+    left: -26px;
+  }
+  .features .list li:nth-child(3):after {
+    left: -16px;
+    top: -18px;
   }
   .features .list li:nth-child(4) {
     margin-left: 112px;
@@ -1775,6 +1783,18 @@ button.button-green,
     padding-right: 46px;
     float: right;
     background-position: center center;
+  }
+  .features {
+    padding-top: 166px;
+  }
+  .features .heading {
+    margin-bottom: 110px;
+  }
+  .features .list {
+    padding: 0 66px;
+  }
+  .features .list li {
+    margin-bottom: -15px;
   }
 }
 @media (min-width: 1380px) {

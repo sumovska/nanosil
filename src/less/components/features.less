@@ -10,6 +10,9 @@
         padding-top: 92px;
         overflow: hidden;
     }
+    @media @desktop-sm {
+        padding-top: 166px;
+    }
 
     .heading {
         margin-top: 0;
@@ -26,6 +29,9 @@
             font-size: 64px;
             line-height: 58px;
         }
+        @media @desktop-sm {
+            margin-bottom: 110px;
+        }
     }
 
     .list {
@@ -37,6 +43,9 @@
         @media @tablet-sm {
             font-size: 18px;
             line-height: 24px;
+        }
+        @media @desktop-sm {
+            padding: 0 66px;
         }
 
         li {
@@ -72,7 +81,7 @@
             }
 
             &:last-of-type {
-              margin-bottom: 0;
+                margin-bottom: 0;
             }
 
             &:nth-child(1) {
@@ -158,9 +167,10 @@
 
             @media @tablet-sm {
                 min-height: 140px;
-                margin-bottom: -35px;
+                margin-bottom: -15px;
                 padding-left: 140px;
-                padding-top: 40px;
+                padding-right: 140px;
+                padding-top: 20px;
                 &:before, &:after {
                     width: 140px;
                     height: 140px;
@@ -198,6 +208,13 @@
                 }
                 &:nth-child(3) {
                     margin-left: 30px;
+                    &:before {
+                        left: -26px;
+                    }
+                    &:after {
+                        left: -16px;
+                        top: -18px;
+                    }
                 }
                 &:nth-child(4) {
                     margin-left: 112px;
