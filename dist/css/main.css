@@ -1426,6 +1426,8 @@ button.button-green,
   }
   .recommendation {
     padding-top: 100px;
+  }
+  .recommendation .wrapper {
     padding-bottom: 54px;
   }
   .recommendation .heading {
@@ -1748,6 +1750,9 @@ button.button-green,
   }
   .recommendation {
     padding-top: 140px;
+  }
+  .recommendation .wrapper {
+    padding-bottom: 125px;
   }
   .recommendation .heading {
     margin-bottom: 120px;
