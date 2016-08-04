@@ -5,19 +5,32 @@
     padding-top: 54px;
     padding-bottom: 54px;
     @media @tablet-sm {
-        padding-top: 116px;
+      padding-top: 92px;
+    }
+    @media @desktop-sm {
+        padding-top: 122px;
+        padding-bottom: 100px;
     }
 
     .heading {
         .h1;
         margin: 0;
+        @media @desktop-sm {
+            margin: 0;
+            font-size: 96px;
+            line-height: 82px;
+        }
     }
 
     .area {
-      @media @tablet-sm {
-        padding-left: 340px;
-          margin-bottom: 98px;
-      }
+        @media @tablet-sm {
+            padding-left: 340px;
+            margin-bottom: 98px;
+        }
+        @media @desktop-sm {
+            padding-left: 516px;
+            margin-bottom: 56px;
+        }
     }
 
     .slogan {
@@ -30,19 +43,22 @@
             line-height: 42px;
         }
         @media @desktop-sm {
-            margin-bottom: 20px;
-            font-size: 74px;
-            line-height: 54px;
+            margin-bottom: 36px;
+            font-size: 59px;
+            line-height: 59px;
         }
     }
 
     .counter {
-        margin-bottom: 24px;
+      max-width: 340px;
+        margin: 0 auto 24px;
         cursor: default;
         user-select: none;
         @media @tablet-sm {
-            margin-bottom: 24px;
-                margin-left: 390px;
+              float: right;
+        }
+        @media @desktop-sm {
+            margin-bottom: 55px;
         }
 
         .title {
@@ -57,9 +73,8 @@
                 letter-spacing: -.006em;
             }
             @media @desktop-sm {
-                font-size: 52px;
-                line-height: 46px;
-                letter-spacing: .007em;
+                font-size: 40px;
+                line-height: 42px;
             }
         }
 
@@ -68,7 +83,7 @@
             padding: 0;
             list-style: none;
             text-align: center;
-            color: @color-carrot;
+            color: @color-blue-dark;
             font: 11px/11px @font-heading;
             &:after {
                 .clearfix;
@@ -82,8 +97,8 @@
             @media @desktop-sm {
                 margin-left: -4px;
                 margin-right: -4px;
-                font-size: 17px;
-                line-height: 17px;
+                font-size: 13px;
+                line-height: 15px;
             }
 
             li {
@@ -161,8 +176,8 @@
                 }
                 @media @desktop-sm {
                     margin: 0 4px 5px;
-                    font-size: 76px;
-                    line-height: 74px;
+                    font-size: 64px;
+                    line-height: 54px;
                     span {
                         padding-top: 14px;
                     }
@@ -184,19 +199,57 @@
         font: bold 36px/33px @font-heading;
         color: @color-white;
         text-align: right;
+        position: relative;
+
+        .pic {
+            display: none;
+        }
+
         @media @tablet-sm {
-          width: 384px;
-float: left;
-          margin: 0 0 0 -20px;
-              padding: 40px 20px 30px;
-              font-size: 40px;
-              line-height: 40px;
+            width: 384px;
+            margin: 0 0 0 -20px;
+            padding: 40px 20px 30px;
+            font-size: 40px;
+            line-height: 40px;
+            float: left;
+        }
+        @media @tablet-md {
+            width: 530px;
+            margin-left: 50px;
+            padding: 32px 20px 28px;
+            font-size: 52px;
+            line-height: 52px;
+            .pic {
+                width: 93px;
+                height: 225px;
+                display: block;
+                position: absolute;
+                display: block;
+                top: -52px;
+                left: -44px;
+            }
+        }
+        @media @desktop-sm {
+          margin-left: 90px;
         }
     }
 
     .form-feedback {
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+      @media @tablet-sm {
+        max-width: none;
+      }
+        @media @desktop-sm {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
         .form-group {
             margin-bottom: 8px;
+            @media @desktop-sm {
+                margin-bottom: 28px;
+            }
         }
         .form-label {
             margin: 3px 8px 0 0;
@@ -208,6 +261,9 @@ float: left;
             letter-spacing: .01em;
             @media @tablet-sm {
                 margin-right: 18px;
+            }
+            @media @desktop-sm {
+                margin-right: 0;
             }
         }
         input {
@@ -226,21 +282,35 @@ float: left;
             }
         }
         .submit {
+          width: 100%;
+          margin: 0 auto;
+          display: block;
             white-space: normal;
             font-size: 32px;
             line-height: 30px;
             padding: 25px 16px 11px;
             .small {
                 font-size: 24px;
+                display: block;
             }
             @media @tablet-sm {
-              width: 100%;
+                width: 100%;
                 padding: 36px 12px 30px;
                 letter-spacing: -.01em;
                 display: block;
                 &, .small {
                     font-size: 40px;
                     line-height: 40px;
+                }
+                .small {
+                  display: inline;
+                }
+            }
+            @media @desktop-sm {
+                padding: 48px 22px 42px;
+                &, .small {
+                    font-size: 54px;
+                    line-height: 54px;
                 }
             }
         }

@@ -1175,7 +1175,8 @@ button.button-green,
   color: #142452;
 }
 .feedback .counter {
-  margin-bottom: 24px;
+  max-width: 340px;
+  margin: 0 auto 24px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1192,7 +1193,7 @@ button.button-green,
   padding: 0;
   list-style: none;
   text-align: center;
-  color: #e07436;
+  color: #114a7f;
   font: 11px/11px 'Bebas Neue', Arial, sans-serif;
 }
 .feedback .counter .line:after {
@@ -1295,6 +1296,15 @@ button.button-green,
   font: bold 36px/33px 'Bebas Neue', Arial, sans-serif;
   color: #fff;
   text-align: right;
+  position: relative;
+}
+.feedback .price .pic {
+  display: none;
+}
+.feedback .form-feedback {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .feedback .form-feedback .form-group {
   margin-bottom: 8px;
@@ -1322,6 +1332,9 @@ button.button-green,
   background-image: url('../img/feedback/icons/phone.png');
 }
 .feedback .form-feedback .submit {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
   white-space: normal;
   font-size: 32px;
   line-height: 30px;
@@ -1329,6 +1342,7 @@ button.button-green,
 }
 .feedback .form-feedback .submit .small {
   font-size: 24px;
+  display: block;
 }
 /* ==========================================================================
    MEDIA QUERIES
@@ -1833,7 +1847,7 @@ button.button-green,
     top: -16px;
   }
   .feedback {
-    padding-top: 116px;
+    padding-top: 92px;
   }
   .feedback .heading {
     font-size: 76px;
@@ -1849,8 +1863,7 @@ button.button-green,
     line-height: 42px;
   }
   .feedback .counter {
-    margin-bottom: 24px;
-    margin-left: 390px;
+    float: right;
   }
   .feedback .counter .title {
     margin-bottom: 0;
@@ -1877,11 +1890,14 @@ button.button-green,
   }
   .feedback .price {
     width: 384px;
-    float: left;
     margin: 0 0 0 -20px;
     padding: 40px 20px 30px;
     font-size: 40px;
     line-height: 40px;
+    float: left;
+  }
+  .feedback .form-feedback {
+    max-width: none;
   }
   .feedback .form-feedback .form-label {
     margin-right: 18px;
@@ -1896,6 +1912,26 @@ button.button-green,
   .feedback .form-feedback .submit .small {
     font-size: 40px;
     line-height: 40px;
+  }
+  .feedback .form-feedback .submit .small {
+    display: inline;
+  }
+}
+@media (min-width: 990px) {
+  .feedback .price {
+    width: 530px;
+    margin-left: 50px;
+    padding: 32px 20px 28px;
+    font-size: 52px;
+    line-height: 52px;
+  }
+  .feedback .price .pic {
+    width: 93px;
+    height: 225px;
+    position: absolute;
+    display: block;
+    top: -52px;
+    left: -44px;
   }
 }
 @media (min-width: 1170px) {
@@ -2127,6 +2163,7 @@ button.button-green,
   }
   .features {
     padding-top: 166px;
+    padding-bottom: 126px;
   }
   .features .heading {
     margin-bottom: 104px;
@@ -2138,27 +2175,42 @@ button.button-green,
   .features .list li:nth-child(2) {
     margin-left: 158px;
   }
+  .feedback {
+    padding-top: 122px;
+    padding-bottom: 100px;
+  }
   .feedback .heading {
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 120px;
     line-height: 120px;
   }
+  .feedback .heading {
+    margin: 0;
+    font-size: 96px;
+    line-height: 82px;
+  }
+  .feedback .area {
+    padding-left: 516px;
+    margin-bottom: 56px;
+  }
   .feedback .slogan {
-    margin-bottom: 20px;
-    font-size: 74px;
-    line-height: 54px;
+    margin-bottom: 36px;
+    font-size: 59px;
+    line-height: 59px;
+  }
+  .feedback .counter {
+    margin-bottom: 55px;
   }
   .feedback .counter .title {
-    font-size: 52px;
-    line-height: 46px;
-    letter-spacing: .007em;
+    font-size: 40px;
+    line-height: 42px;
   }
   .feedback .counter .line {
     margin-left: -4px;
     margin-right: -4px;
-    font-size: 17px;
-    line-height: 17px;
+    font-size: 13px;
+    line-height: 15px;
   }
   .feedback .counter .line li {
     padding-left: 4px;
@@ -2166,11 +2218,32 @@ button.button-green,
   }
   .feedback .counter .line .number {
     margin: 0 4px 5px;
-    font-size: 76px;
-    line-height: 74px;
+    font-size: 64px;
+    line-height: 54px;
   }
   .feedback .counter .line .number span {
     padding-top: 14px;
+  }
+  .feedback .price {
+    margin-left: 90px;
+  }
+  .feedback .form-feedback {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .feedback .form-feedback .form-group {
+    margin-bottom: 28px;
+  }
+  .feedback .form-feedback .form-label {
+    margin-right: 0;
+  }
+  .feedback .form-feedback .submit {
+    padding: 48px 22px 42px;
+  }
+  .feedback .form-feedback .submit,
+  .feedback .form-feedback .submit .small {
+    font-size: 54px;
+    line-height: 54px;
   }
 }
 @media (min-width: 1380px) {
