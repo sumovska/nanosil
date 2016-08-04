@@ -1793,9 +1793,6 @@ button.button-green,
   .features .list {
     padding: 0 66px;
   }
-  .features .list li {
-    margin-bottom: -15px;
-  }
 }
 @media (min-width: 1380px) {
   .steps .list {

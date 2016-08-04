@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
     /** Source paths **/
-    var components = 'bower_components/';
+    var components = 'bower_componpents/';
     var src = {
         root: 'src/',
         less: 'src/less/',
@@ -14,12 +14,12 @@ module.exports = function(grunt) {
 
     /** Temp paths **/
     var temp = {
-        root: 'temp/',
-        css: 'temp/css/',
-        js: 'temp/js/',
-        img: 'temp/img/',
-        svg: 'temp/svg/',
-        favicon: 'temp/favicon/',
+        root: '.temp/',
+        css: '.temp/css/',
+        js: '.temp/js/',
+        img: '.temp/img/',
+        svg: '.temp/svg/',
+        favicon: '.temp/favicon/',
     };
 
     /** Destination paths **/
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         // Config
         config: {
             src: 'src/',
-            temp: 'temp/',
+            temp: '.temp/',
             dist: 'dist/'
         },
 
