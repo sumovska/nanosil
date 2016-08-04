@@ -996,6 +996,7 @@ button.button-green,
    ========================================================================== */
 .features {
   padding-top: 54px;
+  padding-bottom: 40px;
   background: url('../img/features/bg.jpg') center center no-repeat;
   background-size: cover;
   color: #fff;
@@ -1150,6 +1151,184 @@ button.button-green,
           transform: rotate(35deg);
   left: 3px;
   top: -3px;
+}
+/* ==========================================================================
+   FEEDBACK
+   ========================================================================== */
+.feedback {
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+.feedback .heading {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font: 800 58px/54px 'Bebas Neue', Arial, sans-serif;
+  color: #114a7f;
+  margin: 0;
+}
+.feedback .heading + p {
+  margin-top: 0;
+}
+.feedback .slogan {
+  margin-bottom: 12px;
+  font: bold 35px/30px 'Bebas Neue', Arial, sans-serif;
+  color: #142452;
+}
+.feedback .counter {
+  margin-bottom: 24px;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.feedback .counter .title {
+  margin: 0 0 2px;
+  font: 300 35px/30px 'Bebas Neue', Arial, sans-serif;
+  color: #114a7f;
+}
+.feedback .counter .line {
+  margin: 0 -6px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  color: #e07436;
+  font: 11px/11px 'Bebas Neue', Arial, sans-serif;
+}
+.feedback .counter .line:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.feedback .counter .line li {
+  width: 33.3%;
+  padding: 0 3px;
+  float: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.feedback .counter .line li:after {
+  display: table;
+  content: '\0020';
+  clear: both;
+}
+.feedback .counter .line .number {
+  margin: 0 2px 8px;
+  padding: 1px;
+  display: block;
+  -webkit-flex-basis: 45%;
+      -ms-flex-preferred-size: 45%;
+          flex-basis: 45%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: -webkit-linear-gradient(top, #ffbe4e 0%, #ff7c00 100%);
+  background: linear-gradient(to bottom, #ffbe4e 0%, #ff7c00 100%);
+  border-radius: 5px;
+  font-size: 50px;
+  line-height: 48px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+}
+.feedback .counter .line .number:before {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  background: #000;
+  border-radius: 5px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  z-index: 0;
+}
+.feedback .counter .line .number span {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0 0 0;
+  border-radius: 5px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.feedback .counter .line .number span:before {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #565656 0%, #5d5d5d 8%, #959595 14%, #727272 17%, #747473 24%, #b2b2b2 33%, #d8d8d8 40%, #cbcbcb 43%, #e7e7e7 48%, #ffffff 53%, #fefbf0 60%, #cecece 63%, #949494 67%, #727272 71%, #727272 80%, #797979 86%, #999999 90%, #929292 100%);
+  background: linear-gradient(to bottom, #565656 0%, #5d5d5d 8%, #959595 14%, #727272 17%, #747473 24%, #b2b2b2 33%, #d8d8d8 40%, #cbcbcb 43%, #e7e7e7 48%, #ffffff 53%, #fefbf0 60%, #cecece 63%, #949494 67%, #727272 71%, #727272 80%, #797979 86%, #999999 90%, #929292 100%);
+  box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.69);
+  opacity: .3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  -webkit-transform: scale(2) translate3d(-25%, -25%, 0);
+          transform: scale(2) translate3d(-25%, -25%, 0);
+}
+.feedback .counter .line .text {
+  width: 100%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+.feedback .price {
+  margin: 16px 0 28px -20px;
+  padding: 26px 20px 18px;
+  background: #114a7f;
+  border-radius: 0 4px 4px 0;
+  font: bold 36px/33px 'Bebas Neue', Arial, sans-serif;
+  color: #fff;
+  text-align: right;
+}
+.feedback .form-feedback .form-group {
+  margin-bottom: 8px;
+}
+.feedback .form-feedback .form-label {
+  margin: 3px 8px 0 0;
+  display: block;
+  font: 14px/20px 'Bebas Neue', Arial, sans-serif;
+  color: #b2b2b2;
+  text-align: right;
+  opacity: .55;
+  letter-spacing: .01em;
+}
+.feedback .form-feedback input {
+  padding-left: 68px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-position: 12px center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+.feedback .form-feedback input.name {
+  background-image: url('../img/feedback/icons/user.png');
+}
+.feedback .form-feedback input.tel {
+  background-image: url('../img/feedback/icons/phone.png');
+}
+.feedback .form-feedback .submit {
+  white-space: normal;
+  font-size: 32px;
+  line-height: 30px;
+  padding: 25px 16px 11px;
+}
+.feedback .form-feedback .submit .small {
+  font-size: 24px;
 }
 /* ==========================================================================
    MEDIA QUERIES
@@ -1517,6 +1696,7 @@ button.button-green,
   }
   .features {
     padding-top: 92px;
+    padding-bottom: 64px;
     overflow: hidden;
   }
   .features .heading {
@@ -1651,6 +1831,71 @@ button.button-green,
     height: 145px;
     left: -20px;
     top: -16px;
+  }
+  .feedback {
+    padding-top: 116px;
+  }
+  .feedback .heading {
+    font-size: 76px;
+    line-height: 68px;
+  }
+  .feedback .area {
+    padding-left: 340px;
+    margin-bottom: 98px;
+  }
+  .feedback .slogan {
+    margin-bottom: 50px;
+    font-size: 46px;
+    line-height: 42px;
+  }
+  .feedback .counter {
+    margin-bottom: 24px;
+    margin-left: 390px;
+  }
+  .feedback .counter .title {
+    margin-bottom: 0;
+    font-size: 42px;
+    line-height: 38px;
+    text-align: right;
+    letter-spacing: -0.006em;
+  }
+  .feedback .counter .line {
+    margin-left: -3px;
+    margin-right: -3px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .feedback .counter .line .number {
+    font-size: 64px;
+    line-height: 60px;
+    -webkit-flex-basis: 40%;
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+  }
+  .feedback .counter .line .number span {
+    padding-top: 12px;
+  }
+  .feedback .price {
+    width: 384px;
+    float: left;
+    margin: 0 0 0 -20px;
+    padding: 40px 20px 30px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .feedback .form-feedback .form-label {
+    margin-right: 18px;
+  }
+  .feedback .form-feedback .submit {
+    width: 100%;
+    padding: 36px 12px 30px;
+    letter-spacing: -0.01em;
+    display: block;
+  }
+  .feedback .form-feedback .submit,
+  .feedback .form-feedback .submit .small {
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 @media (min-width: 1170px) {
@@ -1892,6 +2137,40 @@ button.button-green,
   }
   .features .list li:nth-child(2) {
     margin-left: 158px;
+  }
+  .feedback .heading {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 120px;
+    line-height: 120px;
+  }
+  .feedback .slogan {
+    margin-bottom: 20px;
+    font-size: 74px;
+    line-height: 54px;
+  }
+  .feedback .counter .title {
+    font-size: 52px;
+    line-height: 46px;
+    letter-spacing: .007em;
+  }
+  .feedback .counter .line {
+    margin-left: -4px;
+    margin-right: -4px;
+    font-size: 17px;
+    line-height: 17px;
+  }
+  .feedback .counter .line li {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .feedback .counter .line .number {
+    margin: 0 4px 5px;
+    font-size: 76px;
+    line-height: 74px;
+  }
+  .feedback .counter .line .number span {
+    padding-top: 14px;
   }
 }
 @media (min-width: 1380px) {

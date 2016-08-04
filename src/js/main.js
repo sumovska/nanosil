@@ -25,8 +25,8 @@ $.extend(true, $.magnificPopup.defaults, {
 /** On document ready */
 $(document).ready(function() {
 
-    /*** Index ***/
-    $('.index').each(function(){
+    /*** Counter ***/
+    $('.index, .feedback').each(function(){
       $('.counter .line .number', this).wrapInner('<span></span>');
     });
 
