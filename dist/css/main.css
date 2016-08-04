@@ -1526,14 +1526,14 @@ button.button-green,
   }
   .features .list {
     font-size: 18px;
-    line-height: 24px;
+    line-height: 22px;
   }
   .features .list li {
     min-height: 140px;
     margin-bottom: -15px;
     padding-left: 140px;
-    padding-right: 140px;
-    padding-top: 20px;
+    padding-right: 40px;
+    padding-top: 30px;
   }
   .features .list li:before,
   .features .list li:after {
@@ -1543,7 +1543,7 @@ button.button-green,
   .features .list li .icon {
     width: 85px;
     height: 85px;
-    top: 18px;
+    top: 16px;
     left: 0;
   }
   .features .list li:nth-child(1):before {
@@ -1554,64 +1554,103 @@ button.button-green,
     top: 8px;
   }
   .features .list li:nth-child(2) {
-    margin-left: 130px;
+    margin-left: 132px;
   }
   .features .list li:nth-child(2):before,
   .features .list li:nth-child(2):after {
-    width: 125px;
-    height: 125px;
+    width: 145px;
+    height: 145px;
   }
   .features .list li:nth-child(2):before {
-    left: -20px;
-    top: 2px;
+    -webkit-transform: rotate(22deg);
+    -ms-transform: rotate(22deg);
+    transform: rotate(22deg);
+    left: -30px;
+    top: -3px;
   }
   .features .list li:nth-child(2):after {
-    left: -34px;
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+    left: -54px;
   }
   .features .list li:nth-child(3) {
     margin-left: 30px;
   }
   .features .list li:nth-child(3):before {
-    left: -26px;
+    width: 125px;
+    height: 125px;
+    left: -21px;
+    -webkit-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+    transform: rotate(12deg);
   }
   .features .list li:nth-child(3):after {
-    left: -16px;
-    top: -18px;
+    left: -34px;
+    top: -5px;
+    width: 125px;
+    height: 125px;
+    -webkit-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    transform: rotate(25deg);
   }
   .features .list li:nth-child(4) {
     margin-left: 112px;
   }
+  .features .list li:nth-child(4):before,
+  .features .list li:nth-child(4):after {
+    width: 120px;
+    height: 120px;
+  }
   .features .list li:nth-child(4):before {
-    left: -26px;
+    left: -20px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
   .features .list li:nth-child(4):after {
-    left: -54px;
+    left: -10px;
+    top: -10px;
+    -webkit-transform: rotate(55deg);
+    -ms-transform: rotate(55deg);
+    transform: rotate(55deg);
   }
   .features .list li:nth-child(5) {
     margin-left: 70px;
   }
   .features .list li:nth-child(5):before,
   .features .list li:nth-child(5):after {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
   .features .list li:nth-child(5):before {
-    left: -20px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: -28px;
+    top: -10px;
   }
   .features .list li:nth-child(5):after {
-    left: -12px;
-    top: -8px;
+    -webkit-transform: rotate(54deg);
+    -ms-transform: rotate(54deg);
+    transform: rotate(54deg);
+    left: -16px;
+    top: -20px;
   }
   .features .list li:nth-child(6) {
     margin-left: 150px;
   }
   .features .list li:nth-child(6):before {
-    left: -26px;
-    top: -6px;
+    width: 145px;
+    height: 145px;
+    left: -28px;
+    top: -12px;
   }
   .features .list li:nth-child(6):after {
-    left: -14px;
-    top: -8px;
+    width: 145px;
+    height: 145px;
+    left: -20px;
+    top: -16px;
   }
 }
 @media (min-width: 1170px) {
@@ -1845,10 +1884,14 @@ button.button-green,
     padding-top: 166px;
   }
   .features .heading {
-    margin-bottom: 110px;
+    margin-bottom: 104px;
   }
   .features .list {
     padding: 0 66px;
+    font-size: 21px;
+  }
+  .features .list li:nth-child(2) {
+    margin-left: 158px;
   }
 }
 @media (min-width: 1380px) {

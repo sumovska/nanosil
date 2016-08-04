@@ -30,7 +30,7 @@
             line-height: 58px;
         }
         @media @desktop-sm {
-            margin-bottom: 110px;
+            margin-bottom: 104px;
         }
     }
 
@@ -42,10 +42,11 @@
         font-weight: bold;
         @media @tablet-sm {
             font-size: 18px;
-            line-height: 24px;
+            line-height: 22px;
         }
         @media @desktop-sm {
             padding: 0 66px;
+            font-size: 21px;
         }
 
         li {
@@ -170,8 +171,8 @@
                 min-height: 140px;
                 margin-bottom: -15px;
                 padding-left: 140px;
-                padding-right: 140px;
-                padding-top: 20px;
+                padding-right: 40px;
+                padding-top: 30px;
                 &:before, &:after {
                     width: 140px;
                     height: 140px;
@@ -180,7 +181,7 @@
                 .icon {
                     width: 85px;
                     height: 85px;
-                    top: 18px;
+                    top: 16px;
                     left: 0;
                 }
 
@@ -194,63 +195,91 @@
                     }
                 }
                 &:nth-child(2) {
-                    margin-left: 130px;
+                    margin-left: 132px;
                     &:before, &:after {
-                        width: 125px;
-                        height: 125px;
+                        width: 145px;
+                        height: 145px;
                     }
                     &:before {
-                        left: -20px;
-                        top: 2px;
+                        transform: rotate(22deg);
+                        left: -30px;
+                        top: -3px;
                     }
                     &:after {
-                        left: -34px;
+                        transform: rotate(30deg);
+                        left: -54px;
                     }
                 }
                 &:nth-child(3) {
                     margin-left: 30px;
                     &:before {
-                        left: -26px;
+                        width: 125px;
+                        height: 125px;
+                        left: -21px;
+                        transform: rotate(12deg);
                     }
                     &:after {
-                        left: -16px;
-                        top: -18px;
+                        left: -34px;
+                        top: -5px;
+                        width: 125px;
+                        height: 125px;
+                        transform: rotate(25deg);
                     }
                 }
                 &:nth-child(4) {
                     margin-left: 112px;
-                    &:before {
-                        left: -26px;
-                    }
-                    &:after {
-                        left: -54px;
-                    }
-                }
-                &:nth-child(5) {
-                    margin-left: 70px;
                     &:before, &:after {
                         width: 120px;
                         height: 120px;
                     }
                     &:before {
                         left: -20px;
+                        transform: rotate(45deg);
                     }
                     &:after {
-                        left: -12px;
-                        top: -8px;
+                        left: -10px;
+                        top: -10px;
+                        transform: rotate(55deg);
+                    }
+                }
+                &:nth-child(5) {
+                    margin-left: 70px;
+                    &:before, &:after {
+                        width: 140px;
+                        height: 140px;
+                    }
+                    &:before {
+                        transform: rotate(45deg);
+                        left: -28px;
+                        top: -10px;
+                    }
+                    &:after {
+                        transform: rotate(54deg);
+                        left: -16px;
+                        top: -20px;
                     }
                 }
                 &:nth-child(6) {
                     margin-left: 150px;
                     &:before {
-                        left: -26px;
-                        top: -6px;
+                        width: 145px;
+                        height: 145px;
+                        left: -28px;
+                        top: -12px;
                     }
                     &:after {
-                        left: -14px;
-                        top: -8px;
+                        width: 145px;
+                        height: 145px;
+                        left: -20px;
+                        top: -16px;
                     }
                 }
+            }
+
+            @media @desktop-sm {
+              &:nth-child(2) {
+                  margin-left: 158px;
+              }
             }
         }
     }
