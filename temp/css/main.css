@@ -1682,10 +1682,132 @@ button.button-green,
 }
 .features .heading {
   margin-top: 0;
+  margin-bottom: 52px;
   color: #fff;
+  text-align: center;
 }
 .features .heading .color {
   color: #f0862e;
+}
+.features .list {
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+}
+.features .list li {
+  min-height: 74px;
+  margin-bottom: 44px;
+  padding-left: 90px;
+  position: relative;
+}
+.features .list li:before,
+.features .list li:after {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  width: 74px;
+  height: 74px;
+  background: url('../img/temp/pentagon-orange.png') 0 0 no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.features .list li:before {
+  z-index: 1;
+}
+.features .list li:after {
+  opacity: .5;
+  z-index: 0;
+}
+.features .list li .icon {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  z-index: 2;
+}
+.features .list li:nth-child(1):before {
+  transform: rotate(20deg);
+  left: -3px;
+  top: -2px;
+}
+.features .list li:nth-child(1):after {
+  transform: rotate(10deg);
+  left: 2px;
+  top: 2px;
+}
+.features .list li:nth-child(2):before {
+  width: 64px;
+  height: 64px;
+  transform: rotate(15deg);
+  left: 8px;
+  top: -1px;
+}
+.features .list li:nth-child(2):after {
+  width: 64px;
+  height: 64px;
+  transform: rotate(25deg);
+  left: 0;
+  top: -1px;
+}
+.features .list li:nth-child(2) .icon {
+  left: 18px;
+}
+.features .list li:nth-child(3):before {
+  transform: rotate(45deg);
+  left: -3px;
+  top: 1px;
+}
+.features .list li:nth-child(3):after {
+  transform: rotate(-5deg);
+  left: 2px;
+  top: -3px;
+}
+.features .list li:nth-child(3) .icon {
+  top: 14px;
+  left: 11px;
+}
+.features .list li:nth-child(4):before {
+  transform: rotate(20deg);
+  left: 5px;
+  top: -2px;
+}
+.features .list li:nth-child(4):after {
+  transform: rotate(30deg);
+  left: -8px;
+  top: 0;
+}
+.features .list li:nth-child(4) .icon {
+  top: 8px;
+  left: 18px;
+}
+.features .list li:nth-child(5):before {
+  width: 64px;
+  height: 64px;
+  transform: rotate(45deg);
+  left: 2px;
+  top: 1px;
+}
+.features .list li:nth-child(5):after {
+  width: 64px;
+  height: 64px;
+  transform: rotate(-5deg);
+  left: 7px;
+  top: -3px;
+}
+.features .list li:nth-child(6):before {
+  transform: rotate(20deg);
+  left: -2px;
+  top: -2px;
+}
+.features .list li:nth-child(6):after {
+  transform: rotate(35deg);
+  left: 3px;
+  top: -3px;
 }
 /* ==========================================================================
    PAGE

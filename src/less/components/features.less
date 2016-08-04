@@ -2,16 +2,151 @@
    FEATURES
    ========================================================================== */
 .features {
-  padding-top: 60px;
+    padding-top: 60px;
     background: url('@{images}/bg/features.jpg') center center no-repeat;
     background-size: cover;
     color: @color-white;
 
     .heading {
-      margin-top: 0;
-      color: @color-white;
-      .color {
-        color: @color-orange;
-      }
+        margin-top: 0;
+        margin-bottom: 52px;
+        color: @color-white;
+        text-align: center;
+        .color {
+            color: @color-orange;
+        }
+    }
+
+    .list {
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: bold;
+
+        li {
+            min-height: 74px;
+            margin-bottom: 44px;
+            padding-left: 90px;
+            position: relative;
+            &:before, &:after {
+                .pseudo;
+                width: 74px;
+                height: 74px;
+                background: url('@{images}/temp/pentagon-orange.png') 0 0 no-repeat;
+                background-size: cover;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            &:before {
+                z-index: 1;
+            }
+            &:after {
+                opacity: .5;
+                z-index: 0;
+            }
+
+            .icon {
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                top: 8px;
+                left: 10px;
+                z-index: 2;
+            }
+
+            &:nth-child(1) {
+                &:before {
+                    transform: rotate(20deg);
+                    left: -3px;
+                    top: -2px;
+                }
+                &:after {
+                    transform: rotate(10deg);
+                    left: 2px;
+                    top: 2px;
+                }
+            }
+            &:nth-child(2) {
+                &:before {
+                    width: 64px;
+                    height: 64px;
+                    transform: rotate(15deg);
+                    left: 8px;
+                    top: -1px;
+                }
+                &:after {
+                    width: 64px;
+                    height: 64px;
+                    transform: rotate(25deg);
+                    left: 0;
+                    top: -1px;
+                }
+                .icon {
+                    left: 18px;
+                }
+            }
+            &:nth-child(3) {
+                &:before {
+                    transform: rotate(45deg);
+                    left: -3px;
+                    top: 1px;
+                }
+                &:after {
+                    transform: rotate(-5deg);
+                    left: 2px;
+                    top: -3px;
+                }
+                .icon {
+                    top: 14px;
+                    left: 11px;
+                }
+            }
+            &:nth-child(4) {
+                &:before {
+                    transform: rotate(20deg);
+                    left: 5px;
+                    top: -2px;
+                }
+                &:after {
+                    transform: rotate(30deg);
+                    left: -8px;
+                    top: 0;
+                }
+                .icon {
+                    top: 8px;
+                    left: 18px;
+                }
+            }
+            &:nth-child(5) {
+                &:before {
+                    width: 64px;
+                    height: 64px;
+                    transform: rotate(45deg);
+                    left: 2px;
+                    top: 1px;
+                }
+                &:after {
+                    width: 64px;
+                    height: 64px;
+                    transform: rotate(-5deg);
+                    left: 7px;
+                    top: -3px;
+                }
+            }
+            &:nth-child(6) {
+                &:before {
+                    transform: rotate(20deg);
+                    left: -2px;
+                    top: -2px;
+                }
+                &:after {
+                    transform: rotate(35deg);
+                    left: 3px;
+                    top: -3px;
+                }
+            }
+        }
     }
 }
