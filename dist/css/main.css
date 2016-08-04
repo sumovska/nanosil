@@ -78,7 +78,7 @@ body {
   padding: 0;
   position: relative;
   overflow-x: hidden;
-  background: #fff;
+  background: #fff url('../img/body.png');
 }
 /* ==========================================================================
    _TEXT STYLES
@@ -324,6 +324,19 @@ button.button-green,
   background: #4caf50;
   box-shadow: 0 3px 0 0 #2e9032;
 }
+[type='submit'].button-green:hover,
+[type='reset'].button-green:hover,
+[type='button'].button-green:hover,
+button.button-green:hover,
+.button.button-green:hover,
+[type='submit'].button-green:focus,
+[type='reset'].button-green:focus,
+[type='button'].button-green:focus,
+button.button-green:focus,
+.button.button-green:focus {
+  text-decoration: none;
+  background: #2e9032;
+}
 /* ==========================================================================
    DEFAULT FORM
    ========================================================================== */
@@ -342,37 +355,34 @@ button.button-green,
    INDEX
    ========================================================================== */
 .index {
+  min-height: 835px;
   padding-top: 46px;
   padding-bottom: 200px;
   position: relative;
-  background: url('../img/index/bg.jpg') 25% 0 no-repeat;
-  background-size: cover;
   cursor: default;
 }
-.index:before,
-.index:after {
+.index:before {
   display: block;
   content: '\0020';
   overflow: hidden;
   position: absolute;
-  top: 0;
+  top: -40px;
   bottom: 0;
   left: 0;
   right: 0;
-}
-.index:before {
-  background: rgba(255, 255, 255, 0.51);
-  z-index: 0;
-}
-.index:after {
-  background: url('../img/index/pattern.jpg') 0 0 repeat;
-  opacity: .5;
   z-index: 1;
+  background: url('../img/index/bg.jpg') 25% top no-repeat;
+  background-size: cover;
+  opacity: .5;
+  /*
+        .color-white(.5);
+        background: @color;
+        */
 }
 .index .wrapper {
-  max-width: 410px;
+  max-width: 350px;
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 .index .heading {
   margin: 0;
@@ -381,6 +391,7 @@ button.button-green,
   margin-bottom: 18px;
   font: bold 35px/30px 'Bebas Neue', Arial, sans-serif;
   color: #142452;
+  white-space: nowrap;
 }
 .index .image {
   margin-bottom: 24px;
@@ -400,18 +411,19 @@ button.button-green,
           user-select: none;
 }
 .index .image .text {
+  width: 300px;
   margin-top: 25px;
   margin-right: -20px;
-  padding: 20px 20px 14px 88px;
-  background: #114a7f;
+  padding: 22px 20px 16px 30px;
   float: right;
+  font: bold 32px/28px 'Bebas Neue', Arial, sans-serif;
   color: #fff;
   text-align: right;
-  font: bold 32px/30px 'Bebas Neue', Arial, sans-serif;
-  white-space: nowrap;
+  background: #114a7f;
+  letter-spacing: .0065em;
 }
 .index .counter {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -419,9 +431,11 @@ button.button-green,
           user-select: none;
 }
 .index .counter .title {
-  margin: 0 0 4px;
+  margin: 0 0 4px -50px;
   font: 300 35px/30px 'Bebas Neue', Arial, sans-serif;
   color: #114a7f;
+  text-align: right;
+  white-space: nowrap;
 }
 .index .counter .line {
   margin: 0 -6px;
@@ -537,7 +551,6 @@ button.button-green,
    CHECK
    ========================================================================== */
 .check {
-  margin-top: -140px;
   position: relative;
   z-index: 2;
   cursor: default;
@@ -547,13 +560,48 @@ button.button-green,
   z-index: 2;
 }
 .check .bg {
-  background: #f0862e;
   position: absolute;
-  top: 140px;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 0;
+}
+.check .bg:after {
+  display: block;
+  content: '\0020';
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: #f0862e url('../img/check/bg.png') top right repeat;
+}
+.check .bg .round-1 {
+  width: 211px;
+  height: 100px;
+  position: absolute;
+  right: -112px;
+  top: -100px;
+  z-index: 2;
+  background: url('../img/check/round-1.png');
+}
+.check .bg .round-2 {
+  display: none;
+}
+.check .bg .round-3 {
+  display: none;
+}
+.check .head {
+  max-width: 300px;
+  margin: 0 auto;
+  position: absolute;
+  top: -142px;
+  left: 20px;
+  right: 20px;
+  z-index: 5;
 }
 .check .heading {
   margin: 0;
@@ -565,14 +613,16 @@ button.button-green,
   line-height: 17px;
 }
 .check .list {
-  margin: 0;
   padding: 0;
+  margin: 0 0 -24px;
   list-style: none;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
   color: #fff;
   text-align: center;
+  position: relative;
+  top: -28px;
 }
 .check .list:after {
   display: table;
@@ -598,6 +648,8 @@ button.button-green,
 .check .girl {
   width: 200px;
   margin: 0 auto;
+  position: relative;
+  left: -6px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -624,21 +676,23 @@ button.button-green,
 .effects .heading {
   margin-top: 0;
   margin-bottom: 28px;
-  color: #fff;
-  text-align: center;
+  position: relative;
   font-size: 56px;
   line-height: 52px;
+  color: #fff;
+  text-align: center;
 }
 .effects .heading strong {
   color: #e32000;
   font-weight: inherit;
 }
 .effects .list {
-  max-width: 410px;
+  max-width: 450px;
   margin: 0 auto;
   padding: 0;
   list-style: none;
   font: bold 24px/28px 'Bebas Neue', Arial, sans-serif;
+  position: relative;
 }
 .effects .list:after {
   display: table;
@@ -687,7 +741,6 @@ button.button-green,
    STEPS
    ========================================================================== */
 .steps {
-  margin-bottom: 160px;
   padding-top: 56px;
   text-align: center;
   background: url('../img/steps/bg.jpg');
@@ -830,8 +883,10 @@ button.button-green,
    PRODUCT
    ========================================================================== */
 .product {
+  padding-top: 160px;
   margin-bottom: 44px;
   overflow: hidden;
+  background: #fff;
 }
 .product .heading {
   margin: 0 0 42px;
@@ -932,7 +987,6 @@ button.button-green,
 }
 .review .wrapper {
   position: relative;
-  overflow: hidden;
 }
 .review .wrapper > * {
   position: relative;
@@ -1151,6 +1205,93 @@ button.button-green,
           transform: rotate(35deg);
   left: 3px;
   top: -3px;
+}
+/* ==========================================================================
+   TESTIMONIALS
+   ========================================================================== */
+.testimonials {
+  padding-top: 40px;
+  background: #fff;
+}
+.testimonials .heading {
+  margin: 0;
+  font-size: 46px;
+  line-height: 54px;
+  color: #39508d;
+  text-align: center;
+}
+.testimonials .list {
+  font-size: 18px;
+  line-height: 22px;
+  color: #212121;
+  text-align: center;
+}
+.testimonials .list .entry {
+  padding: 55px 20px 40px;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 -20px;
+}
+.testimonials .list .photo {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.testimonials .list .photo .before,
+.testimonials .list .photo .after {
+  width: 214px;
+  height: 214px;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonials .list .photo .before {
+  margin-bottom: 40px;
+}
+.testimonials .list .photo .before .badge {
+  background: #ff0000;
+}
+.testimonials .list .photo .after .badge {
+  left: auto;
+  right: -20px;
+}
+.testimonials .list .photo img {
+  width: 214px;
+  height: 214px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.testimonials .list .photo .badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: -27px;
+  left: -34px;
+  z-index: 5;
+  font: bold 21px/66px 'Bebas Neue', Arial, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  background: #4caf50;
+}
+.testimonials .list .title {
+  margin-top: 16px;
+  margin-bottom: 21px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #39508d;
+}
+.testimonials .list .name {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
 }
 /* ==========================================================================
    FEEDBACK
@@ -1435,18 +1576,32 @@ button.button-green,
     margin-bottom: 30px;
   }
   .index {
+    min-height: 835px;
     padding-top: 76px;
-    padding-bottom: 200px;
-    background-position: 51% 0;
+    padding-bottom: 100px;
+  }
+  .index:before {
+    background-position-x: 45%;
+    background-size: cover;
+    opacity: .85;
   }
   .index .wrapper {
     max-width: 1064px;
     padding-left: 50%;
   }
+  .index .heading {
+    padding-right: 4px;
+    margin-left: -50px;
+    text-align: right;
+    letter-spacing: -0.003em;
+  }
   .index .slogan {
-    margin-bottom: 0;
+    padding-right: 3px;
+    margin: -2px 0 -3px -50px;
     font-size: 46px;
-    line-height: 42px;
+    line-height: 46px;
+    letter-spacing: .0025em;
+    text-align: right;
   }
   .index .image {
     margin-left: -170px;
@@ -1456,11 +1611,15 @@ button.button-green,
     margin: 0 -160px 0 0;
   }
   .index .image .text {
-    margin-top: 40px;
-    padding: 30px 16px 24px 70px;
+    padding: 28px 16px 24px 70px;
+    margin-top: 42px;
     border-radius: 4px;
     font-size: 44px;
     line-height: 42px;
+    letter-spacing: 0;
+  }
+  .index .image .text br {
+    display: none;
   }
   .index .counter {
     margin-bottom: 14px;
@@ -1495,17 +1654,24 @@ button.button-green,
     padding: 24px 16px 12px;
     font-size: 50px;
     line-height: 50px;
+    text-align: center;
+    letter-spacing: 0;
     box-shadow: 0 5px 0 0 #e07436;
   }
   .index .fn {
-    margin-top: 12px;
+    margin-top: 13px;
     font-size: 15px;
+    letter-spacing: -0.0015em;
   }
-  .check {
-    margin-top: -118px;
+  .check .bg:after {
+    right: -256px;
   }
-  .check .bg {
-    top: 110px;
+  .check .bg .round-1 {
+    right: -68px;
+  }
+  .check .head {
+    max-width: none;
+    top: -110px;
   }
   .check .heading {
     margin-bottom: -10px;
@@ -1516,7 +1682,8 @@ button.button-green,
   }
   .check .list {
     padding: 68px 10px 38px;
-    position: relative;
+    margin-bottom: 0;
+    top: auto;
     z-index: 2;
   }
   .check .list li {
@@ -1536,21 +1703,22 @@ button.button-green,
     margin: 0 auto;
     position: absolute;
     bottom: 0;
-    left: 0;
     right: 0;
     z-index: 1;
   }
   .effects {
     padding-top: 104px;
+    background-size: cover;
   }
   .effects .heading {
-    margin-bottom: 40px;
+    margin-bottom: 38px;
     font-size: 82px;
     line-height: 72px;
   }
   .effects .list {
     font-size: 36px;
     line-height: 33px;
+    left: 60px;
   }
   .effects .list li {
     margin-bottom: 29px;
@@ -1561,7 +1729,6 @@ button.button-green,
     top: 0;
   }
   .steps {
-    margin-bottom: 184px;
     padding-top: 64px;
   }
   .steps .wrapper {
@@ -1615,8 +1782,9 @@ button.button-green,
     bottom: 50px;
   }
   .product {
-    margin-bottom: 0;
+    padding-top: 184px;
     padding-bottom: 110px;
+    margin-bottom: 0;
   }
   .product .heading {
     margin-bottom: 94px;
@@ -1696,7 +1864,7 @@ button.button-green,
     width: 745px;
     margin: 0;
     position: absolute;
-    bottom: -56px;
+    bottom: 0;
     left: -220px;
     z-index: 0;
   }
@@ -1943,39 +2111,44 @@ button.button-green,
     line-height: 120px;
   }
   .index {
+    min-height: 1045px;
     padding-top: 42px;
-    padding-bottom: 310px;
     text-align: right;
+    background-size: auto;
   }
   .index:before {
-    display: none;
-  }
-  .index:after {
-    opacity: .2;
+    top: 0;
+    bottom: 0;
+    background-position-x: center;
+    background-size: auto 1090px;
   }
   .index .wrapper {
-    padding-left: 456px;
+    padding-left: 457px;
+  }
+  .index .heading {
+    padding-right: 0;
+    letter-spacing: .0065em;
   }
   .index .slogan {
-    margin-bottom: 20px;
+    margin: -10px 0 11px -100px;
     font-size: 74px;
-    line-height: 54px;
+    line-height: 74px;
   }
   .index .image {
     margin-left: -18px;
     text-align: left;
   }
   .index .image .text {
-    margin-top: 26px;
-    padding-right: 20px;
-    padding-bottom: 28px;
+    height: 112px;
+    padding: 31px 20px 28px 70px;
+    margin-top: 24px;
     font-size: 52px;
     line-height: 52px;
   }
   .index .counter {
     margin-bottom: 18px;
     margin-left: 156px;
-    margin-top: -180px;
+    margin-top: -181px;
   }
   .index .counter .title {
     font-size: 52px;
@@ -2001,16 +2174,46 @@ button.button-green,
     padding-top: 14px;
   }
   .index .button {
-    width: auto;
-    padding: 27px 62px 16px;
+    width: 438px;
+    padding: 27px 10px 16px 16px;
     font-size: 61px;
-    line-height: 61px;
+    line-height: 62px;
   }
   .index .fn {
-    margin-top: 14px;
-    text-align: right;
     font-size: 18px;
     line-height: 20px;
+    text-align: right;
+  }
+  .check .bg:after {
+    right: -378px;
+    background-position: top center;
+  }
+  .check .bg .round-1 {
+    margin-left: 240px;
+    left: 50%;
+    right: auto;
+  }
+  .check .bg .round-2 {
+    width: 489px;
+    height: 167px;
+    margin-left: 536px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -167px;
+    z-index: 2;
+    background: url('../img/check/round-2.png');
+  }
+  .check .bg .round-3 {
+    width: 330px;
+    height: 102px;
+    margin-left: -862px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -102px;
+    z-index: 2;
+    background: url('../img/check/round-3.png');
   }
   .check .list {
     padding-left: 20px;
@@ -2031,6 +2234,7 @@ button.button-green,
   }
   .effects .list {
     max-width: none;
+    left: auto;
   }
   .effects .list li {
     width: 50%;
@@ -2048,9 +2252,11 @@ button.button-green,
     background-position: 0 30px;
   }
   .steps .wrapper {
-    padding-bottom: 110px;
+    padding-bottom: 135px;
   }
   .steps .heading {
+    margin-left: -100px;
+    margin-right: -100px;
     margin-bottom: 6px;
   }
   .steps .list {

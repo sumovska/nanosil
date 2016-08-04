@@ -9,6 +9,7 @@
     color: @color-white;
     @media @tablet-sm {
         padding-top: 104px;
+        background-size: cover;
     }
     @media @desktop-sm {
         padding-top: 160px;
@@ -23,12 +24,13 @@
     .heading {
         margin-top: 0;
         margin-bottom: 28px;
-        color: @color-white;
-        text-align: center;
+        position: relative;
         font-size: 56px;
         line-height: 52px;
+        color: @color-white;
+        text-align: center;
         @media @tablet-sm {
-            margin-bottom: 40px;
+            margin-bottom: 38px;
             font-size: 82px;
             line-height: 72px;
         }
@@ -43,20 +45,23 @@
     }
 
     .list {
-        max-width: 410px;
+        max-width: 450px;
         margin: 0 auto;
         padding: 0;
         list-style: none;
         font: bold 24px/28px @font-heading;
+        position: relative;
         &:after {
             .clearfix;
         }
         @media @tablet-sm {
             font-size: 36px;
             line-height: 33px;
+            left: 60px;
         }
         @media @desktop-sm {
             max-width: none;
+            left: auto;
         }
 
         li {

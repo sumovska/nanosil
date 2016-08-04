@@ -30,11 +30,6 @@ $(document).ready(function() {
       $('.counter .line .number', this).wrapInner('<span></span>');
     });
 
-    /*** Check ***/
-    $('.check').each(function(){
-      $(this).prepend('<div class="bg"></div>');
-    });
-
     /*** Effects ***/
     $('.effects').each(function(){
       $('.list li').prepend('<span class="hexagon"></span>');

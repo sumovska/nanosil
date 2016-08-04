@@ -2,78 +2,96 @@
    INDEX
    ========================================================================== */
 .index {
+    min-height: 835px;
     padding-top: 46px;
     padding-bottom: 200px;
     position: relative;
-    background: url('@{images}/index/bg.jpg') 25% 0 no-repeat;
-    background-size: cover;
     cursor: default;
+    @media @tablet-sm {
+        min-height: 835px;
+        padding-top: 76px;
+        padding-bottom: 100px;
+    }
+    @media @desktop-sm {
+        min-height: 1045px;
+        padding-top: 42px;
+        text-align: right;
+        background-size: auto;
+    }
 
-    &:before, &:after {
+    &:before {
         .pseudo;
         position: absolute;
-        top: 0;
+        top: -40px;
         bottom: 0;
         left: 0;
         right: 0;
-    }
-    &:before {
-        .color-white(.51);
-        background: @color;
-        z-index: 0;
-    }
-    &:after {
-        background: url('@{images}/index/pattern.jpg') 0 0 repeat;
-        opacity: .5;
         z-index: 1;
-    }
-    @media @tablet-sm {
-        padding-top: 76px;
-        padding-bottom: 200px;
-        background-position: 51% 0;
-    }
-    @media @desktop-sm {
-        padding-top: 42px;
-        padding-bottom: 310px;
-        text-align: right;
-        &:before {
-            display: none;
+        background: url('@{images}/index/bg.jpg') 25% top no-repeat;
+        background-size: cover;
+        opacity: .5;
+
+        @media @tablet-sm {
+            background-position-x: 45%;
+            background-size: cover;
+            opacity: .85;
         }
-        &:after {
-            opacity: .2;
+        @media @desktop-sm {
+            top: 0;
+            bottom: 0;
+            background-position-x: center;
+            background-size: auto 1090px;
         }
+        /*
+        .color-white(.5);
+        background: @color;
+        */
     }
 
     .wrapper {
-        max-width: 410px;
+        max-width: 350px;
         position: relative;
-        z-index: 2;
+        z-index: 5;
         @media @tablet-sm {
             max-width: @max-width;
             padding-left: 50%;
         }
         @media @desktop-sm {
-            padding-left: 456px;
+            padding-left: 457px;
         }
     }
 
     .heading {
         margin: 0;
+        @media @tablet-sm {
+            padding-right: 4px;
+            margin-left: -50px;
+            text-align: right;
+            letter-spacing: -.003em;
+        }
+        @media @desktop-sm {
+            padding-right: 0;
+            letter-spacing: .0065em;
+        }
     }
 
     .slogan {
         margin-bottom: 18px;
         font: bold 35px/30px @font-heading;
         color: @color-space-dark;
+        white-space: nowrap;
         @media @tablet-sm {
-            margin-bottom: 0;
+            padding-right: 3px;
+            margin: -2px 0 -3px -50px;
             font-size: 46px;
-            line-height: 42px;
+            line-height: 46px;
+            letter-spacing: .0025em;
+            text-align: right;
         }
         @media @desktop-sm {
-            margin-bottom: 20px;
+            margin: -10px 0 11px -100px;
             font-size: 74px;
-            line-height: 54px;
+            line-height: 74px;
         }
     }
 
@@ -102,30 +120,35 @@
         }
 
         .text {
+            width: 300px;
             margin-top: 25px;
             margin-right: -20px;
-            padding: 20px 20px 14px 88px;
-            background: @color-blue-dark;
+            padding: 22px 20px 16px 30px;
             float: right;
+            font: bold 32px/28px @font-heading;
             color: @color-white;
             text-align: right;
-            font: bold 32px/30px @font-heading;
-            white-space: nowrap;
+            background: @color-blue-dark;
+            letter-spacing: .0065em;
             @media @mobile-md {
                 width: 96%;
                 margin-right: 0;
             }
             @media @tablet-sm {
-                margin-top: 40px;
-                padding: 30px 16px 24px 70px;
+                padding: 28px 16px 24px 70px;
+                margin-top: 42px;
                 border-radius: 4px;
                 font-size: 44px;
                 line-height: 42px;
+                letter-spacing: 0;
+                br {
+                    display: none;
+                }
             }
             @media @desktop-sm {
-                margin-top: 26px;
-                padding-right: 20px;
-                padding-bottom: 28px;
+                height: 112px;
+                padding: 31px 20px 28px 70px;
+                margin-top: 24px;
                 font-size: 52px;
                 line-height: 52px;
             }
@@ -133,7 +156,7 @@
     }
 
     .counter {
-        margin-bottom: 18px;
+        margin-bottom: 16px;
         cursor: default;
         user-select: none;
         @media @tablet-sm {
@@ -144,13 +167,15 @@
         @media @desktop-sm {
             margin-bottom: 18px;
             margin-left: 156px;
-            margin-top: -180px;
+            margin-top: -181px;
         }
 
         .title {
-            margin: 0 0 4px;
+            margin: 0 0 4px -50px;
             font: 300 35px/30px @font-heading;
             color: @color-blue-dark;
+            text-align: right;
+            white-space: nowrap;
             @media @tablet-sm {
                 margin-bottom: 5px;
                 font-size: 42px;
@@ -286,13 +311,15 @@
             padding: 24px 16px 12px;
             font-size: 50px;
             line-height: 50px;
+            text-align: center;
+            letter-spacing: 0;
             box-shadow: 0 5px 0 0 @color-carrot;
         }
         @media @desktop-sm {
-            width: auto;
-            padding: 27px 62px 16px;
+            width: 438px;
+            padding: 27px 10px 16px 16px;
             font-size: 61px;
-            line-height: 61px;
+            line-height: 62px;
         }
     }
 
@@ -302,14 +329,14 @@
         font: 12px/16px @font-heading;
         color: @color-black;
         @media @tablet-sm {
-            margin-top: 12px;
+            margin-top: 13px;
             font-size: 15px;
+            letter-spacing: -.0015em;
         }
         @media @desktop-sm {
-            margin-top: 14px;
-            text-align: right;
             font-size: 18px;
             line-height: 20px;
+            text-align: right;
         }
     }
 }

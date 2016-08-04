@@ -2,13 +2,9 @@
    CHECK
    ========================================================================== */
 .check {
-    margin-top: -140px;
     position: relative;
     z-index: 2;
     cursor: default;
-    @media @tablet-sm {
-        margin-top: -118px;
-    }
 
     .wrapper {
         position: relative;
@@ -16,15 +12,89 @@
     }
 
     .bg {
-        background: @color-orange;
         position: absolute;
-        top: 140px;
+        top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         z-index: 0;
+
+        &:after {
+            .pseudo;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background: @color-orange url('@{images}/check/bg.png') top right repeat;
+            @media @tablet-sm {
+                right: -256px;
+            }
+            @media @desktop-sm {
+                right: -378px;
+                background-position: top center;
+            }
+        }
+
+        .round-1 {
+            width: 211px;
+            height: 100px;
+            position: absolute;
+            right: -112px;
+            top: -100px;
+            z-index: 2;
+            background: url('@{images}/check/round-1.png');
+            @media @tablet-sm {
+                right: -68px;
+            }
+            @media @desktop-sm {
+                margin-left: 240px;
+                left: 50%;
+                right: auto;
+            }
+        }
+        .round-2 {
+            display: none;
+            @media @desktop-sm {
+                width: 489px;
+                height: 167px;
+                margin-left: 536px;
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: -167px;
+                z-index: 2;
+                background: url('@{images}/check/round-2.png');
+            }
+        }
+        .round-3 {
+            display: none;
+            @media @desktop-sm {
+                width: 330px;
+                height: 102px;
+                margin-left: -862px;
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: -102px;
+                z-index: 2;
+                background: url('@{images}/check/round-3.png');
+            }
+        }
+    }
+
+    .head {
+        max-width: 300px;
+        margin: 0 auto;
+        position: absolute;
+        top: -142px;
+        left: 20px;
+        right: 20px;
+        z-index: 5;
         @media @tablet-sm {
-            top: 110px;
+            max-width: none;
+            top: -110px;
         }
     }
 
@@ -47,20 +117,23 @@
     }
 
     .list {
-        margin: 0;
         padding: 0;
+        margin: 0 0 -24px;
         list-style: none;
         font-weight: 500;
         font-size: 18px;
         line-height: 18px;
         color: @color-white;
         text-align: center;
+        position: relative;
+        top: -28px;
         &:after {
             .clearfix;
         }
         @media @tablet-sm {
             padding: 68px 10px 38px;
-            position: relative;
+            margin-bottom: 0;
+            top: auto;
             z-index: 2;
         }
         @media @desktop-sm {
@@ -113,13 +186,14 @@
     .girl {
         width: 200px;
         margin: 0 auto;
+        position: relative;
+        left: -6px;
         user-select: none;
         @media @tablet-sm {
             width: 615px;
             margin: 0 auto;
             position: absolute;
             bottom: 0;
-            left: 0;
             right: 0;
             z-index: 1;
         }
