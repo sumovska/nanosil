@@ -339,21 +339,14 @@ button.button-green,
   margin-bottom: 0;
 }
 /* ==========================================================================
-   PAGE
-   ========================================================================== */
-/* ==========================================================================
-   HEADER
-   ========================================================================== */
-/* ==========================================================================
    INDEX
    ========================================================================== */
 .index {
   padding-top: 46px;
   padding-bottom: 200px;
-  background-position: 25% 0;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
+  background: url('../img/index/bg.jpg') 25% 0 no-repeat;
+  background-size: cover;
   cursor: default;
 }
 .index:before,
@@ -372,7 +365,7 @@ button.button-green,
   z-index: 0;
 }
 .index:after {
-  background: url('../img/patterns/index.jpg') 0 0 repeat;
+  background: url('../img/index/pattern.jpg') 0 0 repeat;
   opacity: .5;
   z-index: 1;
 }
@@ -467,6 +460,7 @@ button.button-green,
 .index .counter .line .number {
   margin: 0 2px 4px;
   padding: 1px;
+  display: block;
   -webkit-flex-basis: 45%;
       -ms-flex-preferred-size: 45%;
           flex-basis: 45%;
@@ -540,14 +534,19 @@ button.button-green,
   color: #000;
 }
 /* ==========================================================================
-   VERIFY
+   CHECK
    ========================================================================== */
-.verify {
+.check {
   margin-top: -140px;
   position: relative;
   z-index: 2;
+  cursor: default;
 }
-.verify .bg {
+.check .wrapper {
+  position: relative;
+  z-index: 2;
+}
+.check .bg {
   background: #f0862e;
   position: absolute;
   top: 140px;
@@ -556,20 +555,16 @@ button.button-green,
   right: 0;
   z-index: 0;
 }
-.verify .wrapper {
-  position: relative;
-  z-index: 2;
-}
-.verify .heading {
+.check .heading {
   margin: 0;
   color: #e7812d;
 }
-.verify .text {
+.check .text {
   margin-bottom: 12px;
   font-size: 14px;
   line-height: 17px;
 }
-.verify .list {
+.check .list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -579,17 +574,17 @@ button.button-green,
   color: #fff;
   text-align: center;
 }
-.verify .list:after {
+.check .list:after {
   display: table;
   content: '\0020';
   clear: both;
 }
-.verify .list li {
+.check .list li {
   max-width: 250px;
   margin: 0 auto 20px;
   padding: 0 10px;
 }
-.verify .list .image {
+.check .list .image {
   width: 250px;
   height: 250px;
   margin: 0 -10px 16px;
@@ -600,7 +595,7 @@ button.button-green,
       -ms-user-select: none;
           user-select: none;
 }
-.verify .girl {
+.check .girl {
   width: 200px;
   margin: 0 auto;
   -webkit-user-select: none;
@@ -608,7 +603,7 @@ button.button-green,
       -ms-user-select: none;
           user-select: none;
 }
-.verify .girl img {
+.check .girl img {
   width: 100%;
   height: auto;
 }
@@ -618,10 +613,8 @@ button.button-green,
 .effects {
   padding-top: 58px;
   padding-bottom: 30px;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: #114a7f url('../img/effects/bg.jpg') center center no-repeat;
   background-size: auto 180%;
-  background-color: #114a7f;
   color: #fff;
 }
 .effects .wrapper {
@@ -636,8 +629,9 @@ button.button-green,
   font-size: 56px;
   line-height: 52px;
 }
-.effects .heading .color {
+.effects .heading strong {
   color: #e32000;
+  font-weight: inherit;
 }
 .effects .list {
   max-width: 410px;
@@ -696,8 +690,9 @@ button.button-green,
   margin-bottom: 160px;
   padding-top: 56px;
   text-align: center;
-  background: url('../img/bg/steps.jpg') 0 0 repeat-y;
+  background: url('../img/steps/bg.jpg');
   background-size: 300% auto;
+  cursor: default;
 }
 .steps .wrapper {
   position: relative;
@@ -709,14 +704,15 @@ button.button-green,
   font-size: 46px;
   line-height: 53px;
 }
-.steps .heading .color {
+.steps .heading strong {
   color: #e07436;
+  font-weight: inherit;
 }
 .steps .text {
   font-size: 18px;
   line-height: 22px;
 }
-.steps .text .color {
+.steps .text strong {
   color: #114a7f;
   font-weight: 900;
 }
@@ -728,6 +724,8 @@ button.button-green,
   list-style: none;
   font: bold 21px/23px 'Bebas Neue', Arial, sans-serif;
   color: #380b08;
+  position: relative;
+  z-index: 5;
   counter-reset: my-badass-counter;
 }
 .steps .list:after {
@@ -780,13 +778,14 @@ button.button-green,
   bottom: -100px;
   left: 20px;
   right: 20px;
-}
-.steps .result .entry {
-  position: relative;
+  z-index: 1;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.steps .result .entry {
+  position: relative;
 }
 .steps .result .entry:after {
   display: table;
@@ -818,13 +817,14 @@ button.button-green,
   height: 72px;
   margin: auto 0;
   border-radius: 50%;
-  background: #ff0000;
   color: #fff;
-  font: bold 24px/72px 'Bebas Neue', Arial, sans-serif;
+  font: bold 24px/76px 'Bebas Neue', Arial, sans-serif;
+  overflow: hidden;
   position: absolute;
   left: 0;
   top: 40px;
   bottom: 0;
+  background: #ff0000;
 }
 /* ==========================================================================
    PRODUCT
@@ -861,7 +861,7 @@ button.button-green,
   width: 235px;
   height: 235px;
   margin: 0 auto;
-  background: url('../img/temp/pentagon-l.png') 0 0 no-repeat;
+  background: url('../img/product/pentagon-l.png') 0 0 no-repeat;
   background-size: 100% 100%;
   position: absolute;
   bottom: -48px;
@@ -901,7 +901,7 @@ button.button-green,
 .product .list-check li:before {
   width: 98px;
   height: 98px;
-  background: url('../img/temp/pentagon.png') 0 0 no-repeat;
+  background: url('../img/product/pentagon.png') 0 0 no-repeat;
   background-size: cover;
   left: -15px;
   top: 0;
@@ -909,7 +909,7 @@ button.button-green,
 .product .list-check li:after {
   width: 50px;
   height: 50px;
-  background: url('../img/temp/ok.png') 0 0 no-repeat;
+  background: url('../img/product/ok.png') 0 0 no-repeat;
   background-size: cover;
   left: 10px;
   top: 24px;
@@ -918,46 +918,46 @@ button.button-green,
   width: 100%;
 }
 /* ==========================================================================
-   RECOMMENDATION
+   REVIEW
    ========================================================================== */
-.recommendation {
+.review {
   padding-top: 65px;
-  background: url('../img/bg/recommendation.jpg') 0 0 no-repeat;
+  background: url('../img/review/bg.jpg') 0 0 no-repeat;
   background-size: cover;
   overflow: hidden;
 }
-.recommendation .wrapper {
+.review .wrapper {
   position: relative;
   overflow: hidden;
 }
-.recommendation .wrapper > * {
+.review .wrapper > * {
   position: relative;
   z-index: 2;
 }
-.recommendation .heading {
+.review .heading {
   margin-top: 0;
   margin-bottom: 50px;
   font-size: 46px;
   line-height: 46px;
   text-align: center;
 }
-.recommendation .heading .color {
+.review .heading .color {
   color: #6e6e6e;
 }
-.recommendation .quote {
+.review .quote {
   margin: 0 0 30px;
   font-size: 18px;
   line-height: 21px;
 }
-.recommendation .quote:after {
+.review .quote:after {
   display: table;
   content: '\0020';
   clear: both;
 }
-.recommendation .quote p {
+.review .quote p {
   margin-bottom: 20px;
 }
-.recommendation .quote .author {
+.review .quote .author {
   max-width: 250px;
   margin-top: 44px;
   margin-bottom: 0;
@@ -965,10 +965,10 @@ button.button-green,
   text-align: right;
   float: right;
 }
-.recommendation .quote .author .name {
+.review .quote .author .name {
   display: block;
 }
-.recommendation .photo {
+.review .photo {
   width: 410px;
   height: auto;
   margin: 0 0 -128px -110px;
@@ -977,10 +977,10 @@ button.button-green,
       -ms-user-select: none;
           user-select: none;
 }
-.recommendation .info {
+.review .info {
   margin: 0 -20px;
   padding: 56px 34px 34px;
-  background: url('../img/bg/info.png') center center no-repeat;
+  background: url('../img/review/info.png') center center no-repeat;
   background-size: 200% 100%;
   font: bold 20px/24px 'Bebas Neue', Arial, sans-serif;
   color: #fff;
@@ -992,7 +992,7 @@ button.button-green,
    ========================================================================== */
 .features {
   padding-top: 54px;
-  background: url('../img/bg/features.jpg') center center no-repeat;
+  background: url('../img/features/bg.jpg') center center no-repeat;
   background-size: cover;
   color: #fff;
 }
@@ -1027,7 +1027,7 @@ button.button-green,
   overflow: hidden;
   width: 74px;
   height: 74px;
-  background: url('../img/temp/pentagon-orange.png') 0 0 no-repeat;
+  background: url('../img/features/pentagon.png') 0 0 no-repeat;
   background-size: cover;
   position: absolute;
   left: 0;
@@ -1155,7 +1155,7 @@ button.button-green,
     width: 96%;
     margin-right: 0;
   }
-  .verify .list li {
+  .check .list li {
     margin-left: 20px;
     margin-right: 20px;
     display: inline-block;
@@ -1304,37 +1304,37 @@ button.button-green,
     margin-top: 12px;
     font-size: 15px;
   }
-  .verify {
+  .check {
     margin-top: -118px;
   }
-  .verify .bg {
+  .check .bg {
     top: 110px;
   }
-  .verify .heading {
+  .check .heading {
     margin-bottom: -10px;
   }
-  .verify .text {
+  .check .text {
     margin-bottom: 16px;
     font-size: 16px;
   }
-  .verify .list {
+  .check .list {
     padding: 68px 10px 38px;
     position: relative;
     z-index: 2;
   }
-  .verify .list li {
+  .check .list li {
     margin: 0 0 32px;
   }
-  .verify .list li:nth-child(even) {
+  .check .list li:nth-child(even) {
     float: right;
   }
-  .verify .list li:nth-child(odd) {
+  .check .list li:nth-child(odd) {
     float: left;
   }
-  .verify .list li:nth-child(2n+1) {
+  .check .list li:nth-child(2n+1) {
     clear: left;
   }
-  .verify .girl {
+  .check .girl {
     width: 615px;
     margin: 0 auto;
     position: absolute;
@@ -1477,25 +1477,25 @@ button.button-green,
     margin-left: -20px;
     display: block;
   }
-  .recommendation {
+  .review {
     padding-top: 100px;
   }
-  .recommendation .wrapper {
+  .review .wrapper {
     padding-bottom: 54px;
   }
-  .recommendation .heading {
+  .review .heading {
     margin-bottom: 92px;
     font-size: 68px;
     line-height: 66px;
   }
-  .recommendation .quote {
+  .review .quote {
     margin-left: 50%;
     margin-bottom: 46px;
   }
-  .recommendation .quote .author {
+  .review .quote .author {
     max-width: 450px;
   }
-  .recommendation .photo {
+  .review .photo {
     width: 745px;
     margin: 0;
     position: absolute;
@@ -1503,7 +1503,7 @@ button.button-green,
     left: -220px;
     z-index: 0;
   }
-  .recommendation .info {
+  .review .info {
     margin: 0 -20px 0 76px;
     padding: 74px 24px 48px 74px;
     font-size: 30px;
@@ -1688,14 +1688,14 @@ button.button-green,
     font-size: 18px;
     line-height: 20px;
   }
-  .verify .list {
+  .check .list {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .verify .list li:first-child {
+  .check .list li:first-child {
     margin-left: 130px;
   }
-  .verify .list li:nth-child(2) {
+  .check .list li:nth-child(2) {
     margin-right: 124px;
   }
   .effects {
@@ -1809,27 +1809,27 @@ button.button-green,
     margin-left: -100px;
     display: inline-block;
   }
-  .recommendation {
+  .review {
     padding-top: 140px;
   }
-  .recommendation .wrapper {
+  .review .wrapper {
     padding-bottom: 125px;
   }
-  .recommendation .heading {
+  .review .heading {
     margin-bottom: 120px;
   }
-  .recommendation .quote {
+  .review .quote {
     margin-bottom: 120px;
     margin-left: 370px;
     margin-right: 46px;
     font-size: 20px;
     line-height: 21px;
   }
-  .recommendation .quote .author {
+  .review .quote .author {
     max-width: none;
     margin-top: 42px;
   }
-  .recommendation .info {
+  .review .info {
     width: 670px;
     margin: 0;
     padding-left: 46px;

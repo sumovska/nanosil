@@ -5,8 +5,9 @@
     margin-bottom: 160px;
     padding-top: 56px;
     text-align: center;
-    background: url('@{images}/bg/steps.jpg') 0 0 repeat-y;
+    background: url('@{images}/steps/bg.jpg');
     background-size: 300% auto;
+    cursor: default;
     @media @tablet-sm {
         margin-bottom: 184px;
         padding-top: 64px;
@@ -33,8 +34,9 @@
         margin-bottom: 18px;
         font-size: 46px;
         line-height: 53px;
-        .color {
+        strong {
             color: @color-carrot;
+            font-weight: inherit;
         }
         @media @tablet-sm {
             margin-bottom: 0;
@@ -50,7 +52,7 @@
     .text {
         font-size: 18px;
         line-height: 22px;
-        .color {
+        strong {
             color: @color-blue-dark;
             font-weight: 900;
         }
@@ -68,6 +70,8 @@
         list-style: none;
         font: bold 21px/23px @font-heading;
         color: @color-maroon;
+        position: relative;
+        z-index: 5;
         counter-reset: my-badass-counter;
         &:after {
             .clearfix;
@@ -189,6 +193,8 @@
         bottom: -100px;
         left: 20px;
         right: 20px;
+        z-index: 1;
+        user-select: none;
         @media @tablet-sm {
             text-align: center;
             bottom: -84px;
@@ -199,7 +205,6 @@
 
         .entry {
             position: relative;
-            user-select: none;
             &:after {
                 .clearfix;
             }
@@ -260,13 +265,14 @@
             height: 72px;
             margin: auto 0;
             border-radius: 50%;
-            background: @color-red;
             color: @color-white;
-            font: bold 24px/72px @font-heading;
+            font: bold 24px/76px @font-heading;
+            overflow: hidden;
             position: absolute;
             left: 0;
             top: 40px;
             bottom: 0;
+            background: @color-red;
             @media @tablet-sm {
                 left: -10px;
                 top: 0;

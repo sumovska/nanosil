@@ -4,17 +4,15 @@
 .effects {
     padding-top: 58px;
     padding-bottom: 30px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: @color-blue-dark url('@{images}/effects/bg.jpg') center center no-repeat;
     background-size: auto 180%;
-    background-color: @color-blue-dark;
     color: @color-white;
     @media @tablet-sm {
         padding-top: 104px;
     }
     @media @desktop-sm {
         padding-top: 160px;
-            padding-bottom: 120px;
+        padding-bottom: 120px;
     }
 
     .wrapper {
@@ -29,9 +27,6 @@
         text-align: center;
         font-size: 56px;
         line-height: 52px;
-        .color {
-            color: @color-red-dark;
-        }
         @media @tablet-sm {
             margin-bottom: 40px;
             font-size: 82px;
@@ -39,6 +34,11 @@
         }
         @media @desktop-sm {
             margin-bottom: 128px;
+        }
+
+        strong {
+            color: @color-red-dark;
+            font-weight: inherit;
         }
     }
 

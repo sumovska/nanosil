@@ -27,13 +27,17 @@ $(document).ready(function() {
 
     /*** Index ***/
     $('.index').each(function(){
-      var _counter = $('.counter', this), _n = $('.line .number', _counter);
-      _n.wrapInner('<span></span>');
+      $('.counter .line .number', this).wrapInner('<span></span>');
     });
 
-    /*** Verify ***/
-    $('.verify').each(function(){
+    /*** Check ***/
+    $('.check').each(function(){
       $(this).prepend('<div class="bg"></div>');
+    });
+
+    /*** Effects ***/
+    $('.effects').each(function(){
+      $('.list li').prepend('<span class="hexagon"></span>');
     });
 
 });
