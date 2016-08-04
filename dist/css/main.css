@@ -75,6 +75,7 @@ html {
 body {
   min-height: 100%;
   min-width: 320px;
+  padding: 0;
   position: relative;
   overflow-x: hidden;
   background: #fff;
@@ -396,6 +397,10 @@ button.button-green,
   width: 116px;
   height: auto;
   margin: 0 -116px 0 -8px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .index .image .text {
   margin-top: 25px;
@@ -406,9 +411,15 @@ button.button-green,
   color: #fff;
   text-align: right;
   font: bold 32px/30px 'Bebas Neue', Arial, sans-serif;
+  white-space: nowrap;
 }
 .index .counter {
   margin-bottom: 18px;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .index .counter .title {
   margin: 0 0 4px;
@@ -433,11 +444,14 @@ button.button-green,
   padding: 0 3px;
   float: left;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -449,9 +463,11 @@ button.button-green,
 .index .counter .line .number {
   margin: 0 2px 4px;
   padding: 1px;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
+  -webkit-flex-basis: 45%;
+      -ms-flex-preferred-size: 45%;
+          flex-basis: 45%;
   -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   background: -webkit-linear-gradient(top, #ffbe4e 0%, #ff7c00 100%);
@@ -505,8 +521,9 @@ button.button-green,
 }
 .index .counter .line .text {
   width: 100%;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
 }
 .index .button {
   width: 100%;
@@ -574,10 +591,18 @@ button.button-green,
   margin: 0 -10px 16px;
   display: block;
   border: 5px solid #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .verify .girl {
   width: 200px;
   margin: 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .verify .girl img {
   width: 100%;
@@ -709,6 +734,12 @@ button.button-green,
 .steps .list li {
   margin-bottom: 22px;
 }
+.steps .list li img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .steps .list img {
   width: 296px;
   max-width: 100%;
@@ -734,6 +765,10 @@ button.button-green,
   line-height: 95px;
   color: #fff;
   background: #f0862e;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-radius: 50%;
 }
 .steps .result {
@@ -744,6 +779,10 @@ button.button-green,
 }
 .steps .result .entry {
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .steps .result .entry:after {
   display: table;
@@ -832,6 +871,10 @@ button.button-green,
   display: block;
   position: relative;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .product .list-check {
   margin-bottom: 38px;
@@ -925,6 +968,10 @@ button.button-green,
   width: 410px;
   height: auto;
   margin: 0 0 -128px -110px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .recommendation .info {
   margin: 0 -20px;
@@ -996,6 +1043,10 @@ button.button-green,
   top: 8px;
   left: 12px;
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .features .list li:last-of-type {
   margin-bottom: 0;
@@ -1208,7 +1259,7 @@ button.button-green,
   }
   .index .image .text {
     margin-top: 40px;
-    padding: 30px 16px 24px 88px;
+    padding: 30px 16px 24px 70px;
     border-radius: 4px;
     font-size: 44px;
     line-height: 42px;
@@ -1235,6 +1286,7 @@ button.button-green,
     margin-bottom: 6px;
     font-size: 64px;
     line-height: 60px;
+    -webkit-flex-basis: 40%;
     -ms-flex-preferred-size: 40%;
     flex-basis: 40%;
   }

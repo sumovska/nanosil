@@ -8,7 +8,7 @@
     background: url('@{images}/bg/steps.jpg') 0 0 repeat-y;
     background-size: 300% auto;
     @media @tablet-sm {
-      margin-bottom: 184px;
+        margin-bottom: 184px;
         padding-top: 64px;
     }
     @media @desktop-sm {
@@ -21,10 +21,10 @@
         position: relative;
         padding-bottom: 376px;
         @media @tablet-sm {
-          padding-bottom: 280px;
+            padding-bottom: 280px;
         }
         @media @desktop-sm {
-              padding-bottom: 110px;
+            padding-bottom: 110px;
         }
     }
 
@@ -87,6 +87,11 @@
 
         li {
             margin-bottom: 22px;
+
+            img {
+                user-select: none;
+            }
+
             @media @mobile-md {
                 width: 50%;
                 float: left;
@@ -173,6 +178,7 @@
                 line-height: 95px;
                 color: @color-white;
                 background: @color-orange;
+                user-select: none;
                 border-radius: 50%;
             }
         }
@@ -188,11 +194,12 @@
             bottom: -84px;
         }
         @media @desktop-sm {
-          bottom: -64px;
+            bottom: -64px;
         }
 
         .entry {
             position: relative;
+            user-select: none;
             &:after {
                 .clearfix;
             }
