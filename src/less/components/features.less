@@ -6,6 +6,9 @@
     background: url('@{images}/bg/features.jpg') center center no-repeat;
     background-size: cover;
     color: @color-white;
+    @media @tablet-sm {
+        padding-top: 92px;
+    }
 
     .heading {
         margin-top: 0;
@@ -17,6 +20,11 @@
         .color {
             color: @color-orange;
         }
+        @media @tablet-sm {
+            margin-bottom: 40px;
+            font-size: 64px;
+            line-height: 58px;
+        }
     }
 
     .list {
@@ -25,6 +33,11 @@
         font-size: 14px;
         line-height: 17px;
         font-weight: bold;
+        @media @tablet-sm {
+            font-size: 20px;
+            line-height: 24px;
+            overflow: hidden;
+        }
 
         li {
             min-height: 74px;
@@ -136,6 +149,34 @@
                     transform: rotate(35deg);
                     left: 3px;
                     top: -3px;
+                }
+            }
+
+            @media @tablet-sm {
+                min-height: 140px;
+                padding-left: 140px;
+                padding-top: 40px;
+                &:before, &:after {
+                    width: 140px;
+                    height: 140px;
+                }
+                &:before {
+                    left: -24px;
+                }
+                &:after {
+                    left: -16px;
+                    top: 8px;
+                }
+
+                .icon {
+                    width: 85px;
+                    height: 85px;
+                    top: 18px;
+                    left: 0;
+                }
+
+                &:nth-child(2) {
+
                 }
             }
         }

@@ -819,7 +819,7 @@ button.button-green,
   height: 235px;
   margin: 0 auto;
   background: url('../img/temp/pentagon-l.png') 0 0 no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   position: absolute;
   bottom: -48px;
   left: 0;
@@ -924,7 +924,7 @@ button.button-green,
 .recommendation .photo {
   width: 410px;
   height: auto;
-  margin: 0 0 -128px -100px;
+  margin: 0 0 -128px -110px;
 }
 .recommendation .info {
   margin: 0 -20px;
@@ -1184,7 +1184,7 @@ button.button-green,
   }
   .index {
     padding-top: 76px;
-    padding-bottom: 190px;
+    padding-bottom: 200px;
     background-position: 51% 0;
   }
   .index .wrapper {
@@ -1249,10 +1249,13 @@ button.button-green,
     font-size: 15px;
   }
   .verify {
-    margin-top: -96px;
+    margin-top: -118px;
   }
   .verify .bg {
-    top: 98px;
+    top: 110px;
+  }
+  .verify .heading {
+    margin-bottom: -10px;
   }
   .verify .text {
     margin-bottom: 16px;
@@ -1359,7 +1362,8 @@ button.button-green,
     bottom: 50px;
   }
   .product {
-    margin-bottom: 110px;
+    margin-bottom: 0;
+    padding-bottom: 110px;
   }
   .product .heading {
     margin-bottom: 94px;
@@ -1417,6 +1421,10 @@ button.button-green,
     margin-left: -20px;
     display: block;
   }
+  .recommendation {
+    padding-top: 100px;
+    padding-bottom: 54px;
+  }
   .recommendation .heading {
     margin-bottom: 92px;
     font-size: 68px;
@@ -1433,17 +1441,53 @@ button.button-green,
     width: 745px;
     margin: 0;
     position: absolute;
-    bottom: -76px;
+    bottom: -56px;
     left: -220px;
     z-index: 0;
   }
   .recommendation .info {
     margin: 0 -20px 0 76px;
-    padding: 74px 24px 24px 74px;
+    padding: 74px 24px 48px 74px;
     font-size: 30px;
     line-height: 29px;
     background-position: 34px center;
     background-size: 100% 100%;
+  }
+  .features {
+    padding-top: 92px;
+  }
+  .features .heading {
+    margin-bottom: 40px;
+    font-size: 64px;
+    line-height: 58px;
+  }
+  .features .list {
+    font-size: 20px;
+    line-height: 24px;
+    overflow: hidden;
+  }
+  .features .list li {
+    min-height: 140px;
+    padding-left: 140px;
+    padding-top: 40px;
+  }
+  .features .list li:before,
+  .features .list li:after {
+    width: 140px;
+    height: 140px;
+  }
+  .features .list li:before {
+    left: -24px;
+  }
+  .features .list li:after {
+    left: -16px;
+    top: 8px;
+  }
+  .features .list li .icon {
+    width: 85px;
+    height: 85px;
+    top: 18px;
+    left: 0;
   }
 }
 @media (min-width: 1170px) {
@@ -1616,7 +1660,7 @@ button.button-green,
     margin-left: -40px;
   }
   .product {
-    margin-bottom: 156px;
+    padding-bottom: 156px;
   }
   .product .heading {
     margin-bottom: 98px;

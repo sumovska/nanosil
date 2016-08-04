@@ -6,6 +6,10 @@
     background: url('@{images}/bg/recommendation.jpg') 0 0 no-repeat;
     background-size: cover;
     overflow: hidden;
+    @media @tablet-sm {
+      padding-top: 100px;
+      padding-bottom: 54px;
+    }
     @media @desktop-sm {
         padding-top: 140px;
     }
@@ -82,12 +86,12 @@
     .photo {
         width: 410px;
         height: auto;
-        margin: 0 0 -128px -100px;
+        margin: 0 0 -128px -110px;
         @media @tablet-sm {
             width: 745px;
             margin: 0;
             position: absolute;
-            bottom: -76px;
+            bottom: -56px;
             left: -220px;
             z-index: 0;
         }
@@ -104,7 +108,7 @@
         position: relative;
         @media @tablet-sm {
             margin: 0 -20px 0 76px;
-            padding: 74px 24px 24px 74px;
+            padding: 74px 24px 48px 74px;
             font-size: 30px;
             line-height: 29px;
             background-position: 34px center;
