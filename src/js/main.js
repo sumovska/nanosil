@@ -9,6 +9,15 @@ $(document).ready(function() {
     /** Counter */
     $('.counter').each(function() {
         $('.number', this).wrapInner('<span></span>');
+        var a = $('.number span', this);
+        $(this).countdown('2016/08/20 12:00:00', function(event) {
+            a.eq(0).html(event.strftime('%D')[0]);
+            a.eq(1).html(event.strftime('%D')[1]);
+            a.eq(2).html(event.strftime('%H')[0]);
+            a.eq(3).html(event.strftime('%H')[1]);
+            a.eq(4).html(event.strftime('%M')[0]);
+            a.eq(5).html(event.strftime('%M')[1]);
+        });
     });
 
     /** Effects */
