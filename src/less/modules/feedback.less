@@ -2,7 +2,7 @@
    FEEDBACK
    ========================================================================== */
 .feedback {
-    padding-top: 383px;
+    padding-top: 294px;
     padding-bottom: 54px;
     position: relative;
     cursor: default;
@@ -30,7 +30,7 @@
             margin-left: -470px;
             left: 50%;
             right: auto;
-            top: 18px;
+            top: 30px;
             user-select: none;
         }
         @media @desktop-sm {
@@ -267,89 +267,90 @@
             margin-left: 83px;
         }
     }
+}
 
-    .form-feedback {
-        max-width: 450px;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        z-index: 5;
+/** Form */
+.form-feedback {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 5;
+    @media @tablet-sm {
+        max-width: none;
+    }
+    @media @desktop-sm {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .form-group {
+        margin-bottom: 8px;
+        @media @desktop-sm {
+            margin-bottom: 28px;
+        }
+    }
+    .form-label {
+        margin: 3px 8px 0 0;
+        display: block;
+        font: 14px/20px @font-heading;
+        color: @color-sliver-dark;
+        text-align: right;
+        opacity: .55;
+        letter-spacing: .01em;
         @media @tablet-sm {
-            max-width: none;
+            margin-right: 18px;
         }
         @media @desktop-sm {
-            padding-left: 20px;
-            padding-right: 20px;
+            margin-right: 0;
         }
-        .form-group {
-            margin-bottom: 8px;
-            @media @desktop-sm {
-                margin-bottom: 28px;
-            }
+    }
+    input {
+        padding-left: 68px;
+        .color-white(.5);
+        background-color: @color;
+        background-position: 12px center;
+        background-repeat: no-repeat;
+        background-size: 40px 40px;
+        &.name {
+            background-image: url('@{images}/feedback/icons/user.png');
         }
-        .form-label {
-            margin: 3px 8px 0 0;
-            display: block;
-            font: 14px/20px @font-heading;
-            color: @color-sliver-dark;
-            text-align: right;
-            opacity: .55;
-            letter-spacing: .01em;
-            @media @tablet-sm {
-                margin-right: 18px;
-            }
-            @media @desktop-sm {
-                margin-right: 0;
-            }
-        }
-        input {
-            padding-left: 68px;
+        &.tel {
             .color-white(.5);
-            background-color: @color;
-            background-position: 12px center;
-            background-repeat: no-repeat;
-            background-size: 40px 40px;
-            &.name {
-                background-image: url('@{images}/feedback/icons/user.png');
+            background-image: url('@{images}/feedback/icons/phone.png');
+        }
+    }
+    .submit {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        white-space: normal;
+        font-size: 32px;
+        line-height: 30px;
+        padding: 25px 16px 11px;
+        .small {
+            font-size: 24px;
+            display: block;
+        }
+        @media @tablet-sm {
+            width: 100%;
+            padding: 36px 12px 30px;
+            letter-spacing: -.01em;
+            display: block;
+            &, .small {
+                font-size: 40px;
+                line-height: 40px;
             }
-            &.tel {
-                .color-white(.5);
-                background-image: url('@{images}/feedback/icons/phone.png');
+            .small {
+                display: inline;
             }
         }
-        .submit {
-            width: 100%;
-            margin: 0 auto;
-            display: block;
-            white-space: normal;
-            font-size: 32px;
-            line-height: 30px;
-            padding: 25px 16px 11px;
-            .small {
-                font-size: 24px;
-                display: block;
-            }
-            @media @tablet-sm {
-                width: 100%;
-                padding: 36px 12px 30px;
-                letter-spacing: -.01em;
-                display: block;
-                &, .small {
-                    font-size: 40px;
-                    line-height: 40px;
-                }
-                .small {
-                    display: inline;
-                }
-            }
-            @media @desktop-sm {
-                width: 952px;
-                padding: 48px 22px 42px;
-                float: right;
-                &, .small {
-                    font-size: 54px;
-                    line-height: 54px;
-                }
+        @media @desktop-sm {
+            width: 952px;
+            padding: 48px 22px 36px;
+            float: right;
+            &, .small {
+                font-size: 54px;
+                line-height: 54px;
             }
         }
     }

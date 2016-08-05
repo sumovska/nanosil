@@ -1,35 +1,36 @@
 /* ==========================================================================
    POPUPS
    ========================================================================== */
-@duration-popup: @duration-l;
+@duration-small: .2s;
+@duration-default: .4s;
 /* ZOOM-IN EFFECT */
 .mfp {
     &-slide-in {
         .mfp-content {
-            transition: transform @duration-popup;
-            transform: translate3d(0, -150% , 0);
+            transition: transform @duration-default @easing;
+            transform: translate3d(0, -200% , 0);
         }
         &.mfp-bg {
             opacity: 0;
-            transition: opacity @duration-popup;
+            transition: opacity @duration-default @easing;
         }
         &.mfp-ready {
             .mfp-content {
                 transform: translate3d(0, 0, 0);
-                transition-delay: .2s;
+                transition-delay: @duration-small;
             }
             &.mfp-bg {
-                opacity: .7;
+                opacity: .9;
             }
         }
         &.mfp-removing {
             .mfp-content {
-                transform: translate3d(0, -150%, 0);
+                transform: translate3d(0, -200%, 0);
                 transition-delay: 0;
             }
             &.mfp-bg {
                 opacity: 0;
-                transition-delay: .4s;
+                transition-delay: @duration-default;
             }
         }
     }
@@ -40,55 +41,52 @@
     }
 
     &-container {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     &-bg {
-        .color-midnight(.7);
-        background: @color;
+        background: @color-dark;
     }
 
     &-bottom-bar, &-title, &-counter {
-        color: @color-white;
         cursor: default;
     }
 
     &-content {
-        max-width: 450px;
-        position: relative;
-        @media @tablet-sm {
-            max-width: 650px;
-        }
-        @media @desktop-sm {
-            max-width: 1140px;
-        }
+        max-width: 640px;
     }
 
     &-close {
-        width: 40px !important;
-        height: 40px;
+        width: 30px !important;
+        height: 30px;
         padding: 0 !important;
-        right: -40px !important;
+        top: 10px !important;
+        right: 5px !important;
         text-align: left !important;
-        opacity: .75;
-        transition: opacity @duration;
+        transition: none;
+        opacity: 1;
         cursor: pointer;
+        @media @tablet-sm {
+            top: 39px !important;
+            right: 36px !important;
+        }
 
         &:before, &:after {
             .pseudo;
-            width: 26px;
-            height: 3px;
+            width: 15px;
+            height: 2px;
             border: none;
+            border-radius: 2px;
             margin: auto !important;
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
-            background: @color-white;
-            opacity: 1;
+            background: @color-dark;
             backface-visibility: hidden;
+            opacity: 1;
         }
         &:before {
             transform: rotate(45deg);
@@ -98,65 +96,76 @@
         }
 
         &:hover {
-            opacity: 1;
             top: 0;
         }
     }
+}
 
-    &-arrow {
-        width: 40px;
-        height: 40px;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-        opacity: .75;
-        transform: scale(1);
-        transition: opacity @duration;
-        cursor: pointer;
+.popup {
+    padding: 65px 20px 35px;
+    position: relative;
+    background: @color-white;
+    backface-visibility: hidden;
+    @media @tablet-sm {
+        padding: 65px 90px 70px;
+        border-radius: 10px;
+    }
 
-        &:before {
-            .pseudo;
-            width: 13px;
-            height: 13px;
-            border: none;
-            border-top: 3px solid @color-white;
-            border-right: 3px solid @color-white;
-            margin: auto !important;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 1;
-            backface-visibility: hidden;
-        }
-        &:after {
-            display: none;
+    .heading {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 30px;
+        display: block;
+        font: 300 24px/30px @font-heading;
+        color: @color-gray-dark;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: default;
+        @media @tablet-sm {
+            width: auto;
+            margin: 0 -50px 55px;
+            line-height: 32px;
         }
 
-        &:hover {
-            margin-top: auto !important;
-            opacity: 1;
+        .big {
+            font-size: 36px;
+            font-weight: bold;
+            display: block;
         }
-
-        &.mfp-arrow-left {
-            left: 0;
+        .small {
+            max-width: 250px;
+            margin: 0 auto;
+            display: block;
             @media @tablet-sm {
-                left: 20px;
-            }
-            &:before {
-                left: 5px;
-                transform: rotate(-135deg);
+                max-width: none;
             }
         }
-        &.mfp-arrow-right {
-            right: 0;
+    }
+
+    .form-feedback {
+        padding: 0;
+
+        .form-group {
+            margin-bottom: 25px;
             @media @tablet-sm {
-                right: 20px;
+                margin-bottom: 8px;
             }
-            &:before {
-                right: 5px;
-                transform: rotate(45deg);
+        }
+
+        .button {
+            width: 100%;
+            max-width: 310px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            margin: 50px auto 0;
+            display: block;
+            font-size: 50px;
+            line-height: normal;
+            @media @tablet-sm {
+                max-width: 440px;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                font-size: 38px;
             }
         }
     }
