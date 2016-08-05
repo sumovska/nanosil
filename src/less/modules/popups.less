@@ -1,0 +1,163 @@
+/* ==========================================================================
+   POPUPS
+   ========================================================================== */
+@duration-popup: @duration-l;
+/* ZOOM-IN EFFECT */
+.mfp {
+    &-slide-in {
+        .mfp-content {
+            transition: transform @duration-popup;
+            transform: translate3d(0, -150% , 0);
+        }
+        &.mfp-bg {
+            opacity: 0;
+            transition: opacity @duration-popup;
+        }
+        &.mfp-ready {
+            .mfp-content {
+                transform: translate3d(0, 0, 0);
+                transition-delay: .2s;
+            }
+            &.mfp-bg {
+                opacity: .7;
+            }
+        }
+        &.mfp-removing {
+            .mfp-content {
+                transform: translate3d(0, -150%, 0);
+                transition-delay: 0;
+            }
+            &.mfp-bg {
+                opacity: 0;
+                transition-delay: .4s;
+            }
+        }
+    }
+
+    &-wrap {
+        min-width: 320px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    &-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &-bg {
+        .color-midnight(.7);
+        background: @color;
+    }
+
+    &-bottom-bar, &-title, &-counter {
+        color: @color-white;
+        cursor: default;
+    }
+
+    &-content {
+        max-width: 450px;
+        position: relative;
+        @media @tablet-sm {
+            max-width: 650px;
+        }
+        @media @desktop-sm {
+            max-width: 1140px;
+        }
+    }
+
+    &-close {
+        width: 40px !important;
+        height: 40px;
+        padding: 0 !important;
+        right: -40px !important;
+        text-align: left !important;
+        opacity: .75;
+        transition: opacity @duration;
+        cursor: pointer;
+
+        &:before, &:after {
+            .pseudo;
+            width: 26px;
+            height: 3px;
+            border: none;
+            margin: auto !important;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: @color-white;
+            opacity: 1;
+            backface-visibility: hidden;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            opacity: 1;
+            top: 0;
+        }
+    }
+
+    &-arrow {
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        opacity: .75;
+        transform: scale(1);
+        transition: opacity @duration;
+        cursor: pointer;
+
+        &:before {
+            .pseudo;
+            width: 13px;
+            height: 13px;
+            border: none;
+            border-top: 3px solid @color-white;
+            border-right: 3px solid @color-white;
+            margin: auto !important;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 1;
+            backface-visibility: hidden;
+        }
+        &:after {
+            display: none;
+        }
+
+        &:hover {
+            margin-top: auto !important;
+            opacity: 1;
+        }
+
+        &.mfp-arrow-left {
+            left: 0;
+            @media @tablet-sm {
+                left: 20px;
+            }
+            &:before {
+                left: 5px;
+                transform: rotate(-135deg);
+            }
+        }
+        &.mfp-arrow-right {
+            right: 0;
+            @media @tablet-sm {
+                right: 20px;
+            }
+            &:before {
+                right: 5px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
